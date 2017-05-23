@@ -1,0 +1,26 @@
+{
+  "name": "refriger",
+  "version": "0.0.1",
+  "description": "The original website (http://www.refriger.ru) renewal",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/aggpys/refriger.git"
+  },
+  "keywords": [
+    "website",
+    "refriger"
+  ],
+  "author": "aggpys@live.com",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/aggpys/refriger/issues"
+  },
+  "homepage": "https://github.com/aggpys/refriger#readme",
+  "devDependencies": {
+    "gulp": "^3.9.1",
+    "yargs": "^8.0.1"
+  }
+}
