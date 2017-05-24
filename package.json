@@ -2,9 +2,6 @@
   "name": "refriger",
   "version": "0.0.1",
   "description": "The original website (http://www.refriger.ru) renewal",
-  "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
-  },
   "repository": {
     "type": "git",
     "url": "git+https://github.com/aggpys/refriger.git"
@@ -19,6 +16,9 @@
     "url": "https://github.com/aggpys/refriger/issues"
   },
   "homepage": "https://github.com/aggpys/refriger#readme",
+  "browserslist": [
+    "last 10 versions"
+  ],
   "devDependencies": {
     "autoprefixer": "^7.1.1",
     "browser-sync": "^2.18.12",
@@ -39,7 +39,8 @@
     "postcss-import": "^10.0.0",
     "yargs": "^8.0.1"
   },
-  "browserslist": [
-    "last 10 versions"
-  ]
+  "dependencies": {
+    "@types/jquery": "^2.0.45",
+    "@types/three": "^0.84.8"
+  }
 }

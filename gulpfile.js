@@ -134,10 +134,11 @@ gulp.task('build:serve', ['copy:misc', 'copy:images', 'copy:favicons', 'bundle:c
 
     });
 
-    gulp.watch(refriger.path.source.styles + '/*.css', ['bundle:css']).on('change', sync.reload);
-    gulp.watch(refriger.path.source.scripts + '/*.js', ['bundle:js']).on('change', sync.reload);
+    gulp.watch(refriger.path.source.styles + '/*.css', ['bundle:css']);
+    gulp.watch(refriger.path.source.scripts + '/*.js', ['bundle:js']);
     gulp.watch(refriger.path.source.root + '/*.html', ['copy:misc']);
-    gulp.watch(gulp.outdir + '/*.html').on('change', sync.reload);
+    
+    gulp.watch(gulp.outdir + '/**/*.{html,css,js}').on('change', sync.reload);
 
 });
 

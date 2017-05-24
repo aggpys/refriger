@@ -28,8 +28,8 @@
     <link rel="stylesheet" href="./assets/styles/default.css">
 </head>
 
-<body data-spy="scroll" data-target="#navigation">
-    <nav id="navigation" class="navbar navbar-default navbar-fixed-top">
+<body data-spy="scroll" data-target=".active-spy">
+    <nav id="navigation" class="navbar navbar-default navbar-fixed-top active-spy">
         <div class="container">
             <div class="navbar-header">
                 <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
@@ -38,8 +38,8 @@
                     <span class="icon-bar"></span>
                     <span class="icon-bar"></span>
                 </button>
-                <a class="navbar-brand" href="#"><img id="brand-logo" class="hidden-sm img-responsive" data-fallback="./assets/images/nav-logo.png" src="./assets/images/logo.svg" alt="ООО «AиТ»" title="Инженерный центр энергоэффективных холодильных технологий и автоматики"></a>
-                <div class="text-center phone visible-xs text-nowrap"><i class="glyphicon glyphicon-phone-alt"></i><a href="tel:+78123653534">8 <span class="phone-code">812</span> 365 35 34</a></div>
+                <a id="brand-logo" class="navbar-brand" href="#"><img class="hidden-sm img-responsive" data-fallback="./assets/images/nav-logo.png" src="./assets/images/logo.svg" alt="ООО «AиТ»" title="Инженерный центр энергоэффективных холодильных технологий и автоматики"></a>
+                <div class="phone text-center visible-xs text-nowrap"><a href="tel:+78123653534"><i class="glyphicon glyphicon-phone-alt"></i>8 <span class="phone-code">812</span> 365 35 34</a></div>
             </div>
             <div id="navbar" class="navbar-collapse collapse">
                 <ul class="nav navbar-nav">
@@ -50,7 +50,7 @@
                     <li><a href="#gallery">Фотогалерея</a></li>
                     <li><a href="#contacts">Контакты</a></li>
                 </ul>
-                <div class="phone hidden-xs hidden-sm pull-right"><i class="glyphicon glyphicon-phone-alt"></i><a href="tel:+78123653534">8 <span class="phone-code">812</span> 365 35 34</a></div>
+                <div class="phone hidden-xs hidden-sm pull-right"><a href="tel:+78123653534"><i class="glyphicon glyphicon-phone-alt"></i>8 <span class="phone-code">812</span> 365 35 34</a></div>
             </div>
         </div>
     </nav>
@@ -63,9 +63,9 @@
                         <img class="organization-logo img-responsive" data-fallback="./assets/images/header-logo.png" src="./assets/images/logo.svg" alt="ООО «AиТ»">
                         <h3 class="organization-name">Инженерный центр<br>энергоэффективных<br>холодильных технологий<br>и автоматики</h3>
                     </div>
-                    <div class="col-sm-8 text-center hidden-xs">
+                    <div class="col-sm-8 hidden-xs">
                         <h3 class="organization-welcome"><span class="accent-warm">Теплое</span> отношение к <span class="accent-cold">холоду</span></h3>
-                        <!-- <p class="organization-about">Коллектив инженеров с многолетним научно-практическим опытом работы в сфере промышленных холодильных технологий и автоматики, инженерных систем и пищевых производств</p> -->
+                        <p class="organization-about">Коллектив инженеров с многолетним научно-практическим опытом работы в сфере промышленных холодильных технологий и автоматики, инженерных систем и пищевых производств</p>
                     </div>
                 </div>
             </div>
@@ -82,7 +82,7 @@
     <footer>
         <div class="container">
             <div class="col-xs-12 col-md-6">
-                <p>© 2017 ООО «AиТ». Все права защищены.</p>
+                <p>© <span id="year">2017</span> ООО «AиТ». Все права защищены.</p>
             </div>
             <div class="col-md-6 text-right hidden-xs">
                 <a href="http://www.maxiar.spb.ru/" title="Коллективный член Международной Академии Холода"><img src="http://www.maxiar.spb.ru/image/titul2.jpg" alt="Международная Академия Холода"></a>

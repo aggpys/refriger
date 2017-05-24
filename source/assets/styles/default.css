@@ -1,8 +1,9 @@
-/* © 2017 ООО «АиТ» 
- * default.css > The main Bootstrap overrides
+/**
+ * Copyright © 2017 Aleksey Grigoriev <aggpys@live.com>. All rights reserved.
+ * Licensed under the MIT License. See LICENSE file for full license information.
  */
 
-@import url('https://fonts.googleapis.com/css?family=Open+Sans:400,700|Poiret+One&subset=cyrillic');
+@import url('https://fonts.googleapis.com/css?family=Open+Sans+Condensed:300|Open+Sans:400,700&subset=cyrillic');
 
 @-ms-viewport {
     width: device-width;
@@ -28,8 +29,8 @@ h3,
 h4,
 h5,
 h6 {
-    font-family: 'Poiret One', sans-serif;
-    font-weight: 400;
+    font-family: 'Open Sans Condensed', Helvetica, sans-serif;
+    font-weight: 300;
     margin: 0px;
     color: #555;
 }
@@ -62,17 +63,24 @@ footer>div {
     vertical-align: middle;
 }
 
+#year {
+    color: #999;
+}
+
 .navbar-brand {
-    padding: 5px 15px;
+    padding: 5px;
     line-height: 40px;
+}
+
+.navbar-brand {
+    opacity: 0;
+    visibility: hidden;
+    transition: all 0.5s ease;
 }
 
 .navbar-brand>img {
     float: left;
     height: 100%;
-    opacity: 0;
-    visibility: hidden;
-    transition: all 0.5s ease;
 }
 
 .navbar-nav>li,
@@ -85,21 +93,41 @@ footer>div {
     vertical-align: middle;
 }
 
+.phone>a {
+    padding: 5px 10px;
+    border: 1px solid #ddd;
+    border-radius: 1em;
+}
+
+.phone>a:hover {
+    border-color: transparent;
+    background-color: #33c;
+    color: #fff;
+}
+
+.phone>a:active {
+    background-color: #336;
+}
+
+.phone>a:hover>.phone-code {
+    color: #fff;
+}
+
 .phone>a,
 .phone>a:hover,
 .phone>a:active {
-    color: #600;
     font-weight: bold;
     text-decoration: none;
 }
 
-.phone>.glyphicon {
-    padding: 0 0.5em;
+.phone>a>i.glyphicon {
+    padding-right: 0.5em;
+    color: #ccc;
 }
 
 .phone-code {
     font-weight: normal;
-    color: #333;
+    color: #33c;
 }
 
 .phone-code::before {
@@ -132,14 +160,14 @@ footer>div {
 
 .organization-logo {
     padding: 10px 0;
-    max-width: 50%;
+    max-width: 45%;
     margin: 0 auto;
 }
 
 .organization-welcome {
     color: #333;
-    font-size: 2.2em;
-    padding-top: 10px;
+    font-size: 3.0em;
+    letter-spacing: 0.01em;
     text-transform: uppercase;
 }
 
@@ -163,7 +191,7 @@ header>.header-content {
     padding: 128px 0;
     z-index: 0;
 }
-
+/*
 html.canvas header {
     background: none;
-}
+}*/
