@@ -21,7 +21,8 @@ const refriger = {
             images : 'source/assets/images',
             favicons : 'source/assets/favicons',
             scripts : 'source/assets/scripts',
-            styles : 'source/assets/styles'
+            styles : 'source/assets/styles',
+            fonts : 'source/assets/fonts'
 
         },
 
@@ -33,22 +34,69 @@ const refriger = {
 };
 
 const gulp = require('gulp');
+const chalk = require('chalk');
 const argv = require('yargs').argv;
 const del = require('del');
+
+const autoprefixer = require('autoprefixer');
+const cssnano = require('cssnano');
+const cssimport = require('postcss-import');
 
 const plugins = require('gulp-load-plugins')();
 
 /**
  * Copies the website favicon images.
+ * Copies a 'favicon.ico' file to the build root directory.
  */
 gulp.task('copy:favicons', function() {
 
-    var outdir = argv.release ? refriger.path.release : refriger.path.debug;
-    
     return gulp.src(refriger.path.source.favicons + '/*.{png,ico}', { base : refriger.path.source.root })
-        .pipe(plugins.newer('test'))
+        .pipe(plugins.newer(gulp.outdir))
         .pipe(plugins.if('**/favicon.ico', plugins.rename(function(path) { path.dirname = ''; })))
-        .pipe(gulp.dest(outdir));
+        .pipe(gulp.dest(gulp.outdir));
+
+});
+
+/**
+ * Copies raster and vector graphics using the lossless compression.
+ */
+gulp.task('copy:images', function() {
+
+    return gulp.src(refriger.path.source.images + '/*.{png,jpg,svg}', { base : refriger.path.source.root })
+        .pipe(plugins.newer(gulp.outdir))
+        .pipe(plugins.imagemin([
+            plugins.imagemin.jpegtran(), 
+            plugins.imagemin.optipng(), 
+            plugins.imagemin.svgo()]))
+        .pipe(gulp.dest(gulp.outdir));
+
+});
+
+/**
+ * Copies vendor CSS, JavaScript, fonts files and the other static data.
+ */
+gulp.task('copy:misc', function() {
+
+    return gulp.src([
+        refriger.path.source.root + '/*.{html,xml,txt}', 
+        refriger.path.source.fonts + '/*.{ttf,eot,woff,woff2,svg}',
+        refriger.path.source.styles + '/*.min.css',
+        refriger.path.source.scripts + '/*.min.js'], { base : refriger.path.source.root })
+        .pipe(plugins.newer(gulp.outdir))
+        .pipe(gulp.dest(gulp.outdir));
+
+})
+
+/**
+ * Bundles website CSS. Generates source maps for the debug build.
+ */
+gulp.task('bundle:css', function() {
+
+    return gulp.src(refriger.path.source.styles + '/default.css', { base : refriger.path.source.root })
+        .pipe(plugins.if(gulp.debug, plugins.sourcemaps.init()))
+        .pipe(plugins.postcss([cssimport, autoprefixer, cssnano]))
+        .pipe(plugins.if(gulp.debug, plugins.sourcemaps.write()))
+        .pipe(gulp.dest(gulp.outdir));
 
 });
 
@@ -59,16 +107,21 @@ gulp.task('copy:favicons', function() {
  *   --release: starts task for the release build. 
  */
 gulp.task('default', function() {
-   
-}).on('start', function() {
-
+    
     plugins.util.log("%s (%s)", refriger.title, refriger.website);
     plugins.util.log(refriger.copyright);
-    plugins.util.log("\x1b[32m>>\x1b[0m Executing '\x1b[36m%s\x1b[0m' tasks:", argv.release ? "release" : "debug");    
+    plugins.util.log(chalk.green('Executing') + " '" + chalk.grey("%s") + "' tasks:", argv.release ? "release" : "debug"); 
+
+    return gulp.start(['copy:misc', 'copy:images', 'copy:favicons', 'bundle:css']);
+
+}).on('start', function() {
+
+    gulp.outdir = argv.release ? refriger.path.release : refriger.path.debug;
+    gulp.debug = !argv.release;  
  
 }).on('stop', function() {
 
-    plugins.util.log("\x1b[32m>>\x1b[0m Modified '\x1b[33m%s\x1b[0m' directory", argv.release ? refriger.path.release : refriger.path.debug);
+    plugins.util.log(chalk.green('Modified') + " '" + chalk.yellow("%s") + "' directory", gulp.outdir);
 
 });
 
@@ -77,12 +130,10 @@ gulp.task('default', function() {
  */
 gulp.task('build:clean', function() {
 
-    var outdir = argv.release ? refriger.path.release : refriger.path.debug
+    return del([gulp.outdir + '/**', '!' + gulp.outdir]).then(function(deleted) {
 
-    return del([outdir + '/**', '!' + outdir]);
-
-}).on('task_stop', function() {
-
-    plugins.util.log("\x1b[31mRemoved\x1b[0m content from '\x1b[33m%s\x1b[0m' directory", argv.release ? refriger.path.release : refriger.path.debug);
+        plugins.util.log(chalk.red('Removed') + " total " + chalk.red('%s') + " elements", deleted.length);
+    
+    });
 
 });

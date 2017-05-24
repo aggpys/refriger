@@ -1,0 +1,169 @@
+/* © 2017 ООО «АиТ» 
+ * default.css > The main Bootstrap overrides
+ */
+
+@import url('https://fonts.googleapis.com/css?family=Open+Sans:400,700|Poiret+One&subset=cyrillic');
+
+@-ms-viewport {
+    width: device-width;
+}
+
+@-o-viewport {
+    width: device-width;
+}
+
+@viewport {
+    width: device-width;
+}
+
+body {
+    font-family: 'Open Sans', Helvetica, sans-serif;
+    font-weight: 400;
+    font-size: 14px;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    font-family: 'Poiret One', sans-serif;
+    font-weight: 400;
+    margin: 0px;
+    color: #555;
+}
+
+h1,
+h2,
+h3 {
+    color: #333;
+}
+
+body,
+section {
+    padding-top: 50px;
+    overflow-x: hidden;
+}
+
+header {
+    border-bottom: 1px solid rgba(230, 230, 230, 0.5);
+    background: url('../images/home.jpg') no-repeat center center;
+    background-size: cover;
+    position: relative;
+}
+
+footer {
+    min-height: 97px;
+}
+
+footer>div {
+    line-height: 97px;
+    vertical-align: middle;
+}
+
+.navbar-brand {
+    padding: 5px 15px;
+    line-height: 40px;
+}
+
+.navbar-brand>img {
+    float: left;
+    height: 100%;
+    opacity: 0;
+    visibility: hidden;
+    transition: all 0.5s ease;
+}
+
+.navbar-nav>li,
+.navbar-nav>li>a {
+    transition: all 0.5s ease;
+}
+
+.phone {
+    line-height: 50px;
+    vertical-align: middle;
+}
+
+.phone>a,
+.phone>a:hover,
+.phone>a:active {
+    color: #600;
+    font-weight: bold;
+    text-decoration: none;
+}
+
+.phone>.glyphicon {
+    padding: 0 0.5em;
+}
+
+.phone-code {
+    font-weight: normal;
+    color: #333;
+}
+
+.phone-code::before {
+    content: '(';
+}
+
+.phone-code::after {
+    content: ')';
+}
+
+.accent-warm {
+    color: #c33;
+}
+
+.accent-cold {
+    color: #33c;
+}
+
+.visible {
+    visibility: visible !important;
+    opacity: 1 !important;
+}
+
+.organization-name {
+    color: #555;
+    font-size: 1.2em;
+    font-family: 'Open Sans', Helvetica, sans-serif;
+    text-transform: uppercase;
+}
+
+.organization-logo {
+    padding: 10px 0;
+    max-width: 50%;
+    margin: 0 auto;
+}
+
+.organization-welcome {
+    color: #333;
+    font-size: 2.2em;
+    padding-top: 10px;
+    text-transform: uppercase;
+}
+
+.organization-about {
+    padding-top: 10px;
+}
+
+section#about {
+    background: url('../images/about-background.png') repeat-x;
+}
+
+header>canvas {
+    position: absolute;
+    top: 0px;
+    left: 0px;
+    z-index: -1;
+}
+
+header>.header-content {
+    position: relative;
+    padding: 128px 0;
+    z-index: 0;
+}
+
+html.canvas header {
+    background: none;
+}
