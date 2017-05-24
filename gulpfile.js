@@ -42,7 +42,13 @@ const autoprefixer = require('autoprefixer');
 const cssnano = require('cssnano');
 const cssimport = require('postcss-import');
 
-const plugins = require('gulp-load-plugins')();
+const sync = require('browser-sync').create();
+
+const plugins = require('gulp-load-plugins')({
+    rename : {
+        'gulp-cache-bust' : 'bust'
+    }
+});
 
 /**
  * Copies the website favicon images.
@@ -83,6 +89,7 @@ gulp.task('copy:misc', function() {
         refriger.path.source.styles + '/*.min.css',
         refriger.path.source.scripts + '/*.min.js'], { base : refriger.path.source.root })
         .pipe(plugins.newer(gulp.outdir))
+        .pipe(plugins.if('*.html', plugins.bust({ type : 'timestamp' })))
         .pipe(gulp.dest(gulp.outdir));
 
 })
@@ -101,6 +108,40 @@ gulp.task('bundle:css', function() {
 });
 
 /**
+ * Bundles website JavaScript. Generates source maps for the debug build.
+ */
+gulp.task('bundle:js', function() {
+
+    return gulp.src([
+        refriger.path.source.scripts + '/*.js',
+        '!' + refriger.path.source.scripts + '/*.min.js'], { base : refriger.path.source.root })
+        .pipe(plugins.rigger())
+        .pipe(plugins.if(gulp.debug, plugins.sourcemaps.init()))
+        .pipe(plugins.if(gulp.debug, plugins.sourcemaps.write()))
+        .pipe(plugins.rename(function(path) {
+            path.basename = 'at.min';
+        }))
+        .pipe(gulp.dest(gulp.outdir));
+
+})
+
+gulp.task('build:serve', ['copy:misc', 'copy:images', 'copy:favicons', 'bundle:css', 'bundle:js'], function() {
+    
+    sync.init({
+
+        server : gulp.outdir,
+        notify : false
+
+    });
+
+    gulp.watch(refriger.path.source.styles + '/*.css', ['bundle:css']).on('change', sync.reload);
+    gulp.watch(refriger.path.source.scripts + '/*.js', ['bundle:js']).on('change', sync.reload);
+    gulp.watch(refriger.path.source.root + '/*.html', ['copy:misc']);
+    gulp.watch(gulp.outdir + '/*.html').on('change', sync.reload);
+
+});
+
+/**
  * The main Gulp task (by default).
  * 
  * Supports flags:
@@ -112,7 +153,7 @@ gulp.task('default', function() {
     plugins.util.log(refriger.copyright);
     plugins.util.log(chalk.green('Executing') + " '" + chalk.grey("%s") + "' tasks:", argv.release ? "release" : "debug"); 
 
-    return gulp.start(['copy:misc', 'copy:images', 'copy:favicons', 'bundle:css']);
+    return gulp.start('build:serve');
 
 }).on('start', function() {
 
