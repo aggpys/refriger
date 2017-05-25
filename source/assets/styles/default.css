@@ -63,6 +63,32 @@ footer>div {
     vertical-align: middle;
 }
 
+button {
+    background-color: transparent;
+    border: 1px solid #666;
+    font-size: 1.2em;
+    padding: 0.6em 1.2em;
+    transition: all 0.3s ease;
+    text-transform: uppercase;
+}
+
+button:hover {
+    background-color: #c33;
+    border-color: transparent;
+    color: #eee;
+}
+
+button:focus {
+    outline: none;
+    border-color: #c33;
+    border-style: dashed;
+}
+
+button:active {
+    background-color: #933;
+    color: #aaa;
+}
+
 #year {
     color: #999;
 }
@@ -97,6 +123,7 @@ footer>div {
     padding: 5px 10px;
     border: 1px solid #ddd;
     border-radius: 1em;
+    transition: all 0.3s ease-in;
 }
 
 .phone>a:hover {
@@ -126,6 +153,7 @@ footer>div {
 }
 
 .phone-code {
+    transition: all 0.3s ease-in;
     font-weight: normal;
     color: #33c;
 }
@@ -152,8 +180,9 @@ footer>div {
 }
 
 .organization-name {
-    color: #555;
+    color: #333;
     font-size: 1.2em;
+    line-height: 1.4em;
     font-family: 'Open Sans', Helvetica, sans-serif;
     text-transform: uppercase;
 }
@@ -166,13 +195,19 @@ footer>div {
 
 .organization-welcome {
     color: #333;
-    font-size: 3.0em;
-    letter-spacing: 0.01em;
+    font-size: 2.5em;
+    margin-left: 32px;
     text-transform: uppercase;
 }
 
 .organization-about {
-    padding-top: 10px;
+    margin: 24px 32px;
+    font-size: 1.1em;
+    color: #000;
+}
+
+button#button-about {
+    margin-left: 32px;
 }
 
 section#about {
@@ -191,7 +226,7 @@ header>.header-content {
     padding: 128px 0;
     z-index: 0;
 }
-/*
+
 html.canvas header {
     background: none;
-}*/
+}

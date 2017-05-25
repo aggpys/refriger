@@ -11,9 +11,9 @@ $(document).on('click', 'a', function(event) {
     var id = $.attr(this, 'href');
     var scrollValue = 0;
 
-    if (id.startsWith('#') && id.length > 1)
+    if (id.startsWith('#') && id.length > 1) {
         scrollValue = $(id).offset().top;
-    else if (!id.startsWith('#'))
+    } else if (!id.startsWith('#'))
         return;
     
     event.preventDefault();

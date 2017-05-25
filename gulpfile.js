@@ -87,7 +87,7 @@ gulp.task('copy:misc', function() {
         refriger.path.source.root + '/*.{html,xml,txt}', 
         refriger.path.source.fonts + '/*.{ttf,eot,woff,woff2,svg}',
         refriger.path.source.styles + '/*.min.css',
-        refriger.path.source.scripts + '/*.min.js'], { base : refriger.path.source.root })
+        refriger.path.source.scripts + '/vendor/*.min.js'], { base : refriger.path.source.root })
         .pipe(plugins.newer(gulp.outdir))
         .pipe(plugins.if('*.html', plugins.bust({ type : 'timestamp' })))
         .pipe(gulp.dest(gulp.outdir));
@@ -112,9 +112,7 @@ gulp.task('bundle:css', function() {
  */
 gulp.task('bundle:js', function() {
 
-    return gulp.src([
-        refriger.path.source.scripts + '/*.js',
-        '!' + refriger.path.source.scripts + '/*.min.js'], { base : refriger.path.source.root })
+    return gulp.src(refriger.path.source.scripts + '/index.js', { base : refriger.path.source.root })
         .pipe(plugins.rigger())
         .pipe(plugins.if(gulp.debug, plugins.sourcemaps.init()))
         .pipe(plugins.if(gulp.debug, plugins.sourcemaps.write()))
@@ -153,6 +151,9 @@ gulp.task('default', function() {
     plugins.util.log("%s (%s)", refriger.title, refriger.website);
     plugins.util.log(refriger.copyright);
     plugins.util.log(chalk.green('Executing') + " '" + chalk.grey("%s") + "' tasks:", argv.release ? "release" : "debug"); 
+
+    if (!gulp.debug)
+        return gulp.start(['copy:misc', 'copy:images', 'copy:favicons', 'bundle:css', 'bundle:js']);
 
     return gulp.start('build:serve');
 
