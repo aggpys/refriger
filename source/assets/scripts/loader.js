@@ -33,7 +33,7 @@ var TextureManager = function(assetsBase) {
 
 };
 
-Object.assign(TextureManager, {
+Object.assign(TextureManager.prototype, {
 
     add: function(name, fileName) {
 
@@ -43,12 +43,12 @@ Object.assign(TextureManager, {
 
     get: function(name) {
 
-        this.textures.forEach(function(element) {
-            
-            if (element.name === name)
-                return element.texture;
+        for (var i = 0; i < this.textures.length; i++) {
 
-        }, this);
+            if (this.textures[i].name === name)
+                return this.textures[i].texture;
+
+        }
 
     },
 
@@ -69,9 +69,9 @@ Object.assign(TextureManager, {
                 texture.sourceFile = this.resource.imageUri;
                 this.resource.texture = texture;
 
-                for (var i = 0; i < this.textures.length; i++) {
+                for (var i = 0; i < this.loader.textures.length; i++) {
                     
-                    if (this.textures[i].texture === undefined)
+                    if (this.loader.textures[i].texture === undefined)
                         return;
 
                 }

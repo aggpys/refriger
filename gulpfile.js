@@ -68,7 +68,7 @@ gulp.task('copy:favicons', function() {
  */
 gulp.task('copy:images', function() {
 
-    return gulp.src(refriger.path.source.images + '/*.{png,jpg,svg}', { base : refriger.path.source.root })
+    return gulp.src(refriger.path.source.images + '/**/*.{png,jpg,svg}', { base : refriger.path.source.root })
         .pipe(plugins.newer(gulp.outdir))
         .pipe(plugins.imagemin([
             plugins.imagemin.jpegtran(), 

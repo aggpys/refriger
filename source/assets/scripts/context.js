@@ -55,6 +55,7 @@ var GraphicsContext = function(container, params) {
     this.scene.add(this.camera);
 
     this.domParent.append(this.renderer.domElement);
+    this.objects = [];
 
     $(window).resize(function() {
 
@@ -70,12 +71,31 @@ var GraphicsContext = function(container, params) {
 
 Object.assign(GraphicsContext.prototype, {
 
+    add: function(renderable) {
+
+        if (renderable === undefined)
+            return;
+
+        renderable.setContext(this);
+        this.objects.push(renderable);
+        this.scene.add(renderable.mesh);
+
+    },
+    
+    update: function(delta, elapsedTime) {
+
+        for (var i = 0; i < this.objects.length; i++)
+            this.objects[i].update(delta, elapsedTime);
+
+    },
+
     animate: function() {
 
         var d = this.clock.getDelta();
         var e = this.clock.getElapsedTime();
 
         requestAnimationFrame(this.animate.bind(this));
+        this.update(d, e);
         this.renderer.render(this.scene, this.camera);
 
     }

@@ -5,6 +5,8 @@
 
 //= context.js
 //= loader.js
+//= plane.js
+//= background.js
 //= utils.js
 
 /**
@@ -16,6 +18,8 @@
 (function () {
 
     if (!Modernizr.webgl) return; // Do nothing, if the WebGL is not supported by the current browser.
+
+    var tm = new TextureManager('./assets/images/scenes/default');
 
     var gc = new GraphicsContext('header', {
 
@@ -29,6 +33,19 @@
             position: new THREE.Vector3(0, 0, 1000),
             fov: 75
         }
+
+    });
+
+    tm.add('background', 'background.jpg');
+    tm.load(function(manager) {
+
+        var scene = {
+
+            background: new Background(manager.get('background'))
+
+        }
+
+        gc.add(scene.background);
 
     });
 
