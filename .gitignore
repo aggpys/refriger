@@ -59,3 +59,6 @@ typings/
 
 # Website builds directory
 build
+
+# Thumbs.db
+Thumbs.db
