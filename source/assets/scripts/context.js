@@ -5,11 +5,17 @@
 
 /**
  * Represents the scene graphics context.
+ * @param container The selector (class, identifier, tag name, JavaScript object, etc.) of parent DOM element for the canvas.
+ * @param params An object that contains context parameters, such as lights colors and camera settings.
  */
 var GraphicsContext = function(container, params) {
 
-    this._parent = $(container);
+    this.domParent = $(container);
+    
     params = params || {};
+
+    if (params.camera === undefined)
+        params.camera = {};
 
     var colors = params.colors !== undefined ? params.colors : {
 
@@ -22,64 +28,55 @@ var GraphicsContext = function(container, params) {
     var light = new THREE.DirectionalLight(colors.light, 0.5);
     light.position.set(-1, 0, 1);
 
-    var campos = params.campos !== undefined ? params.campos : new THREE.Vector3(0, 0, 0);
-    var camfov = params.camfov !== undefined ? params.camfov : 80;
-    
-    var width = this._parent.innerWidth();
-    var height= this._parent.innerHeight();
+    var campos = params.camera.position !== undefined ? params.camera.position : new THREE.Vector3(0, 0, 0);
+    var camfov = params.camera.fov !== undefined ? params.camera.fov : 80;
+
+    var width = this.domParent.innerWidth();
+    var height= this.domParent.innerHeight();
     var ratio = width/height;
 
-    this._clock = new THREE.Clock();
-    this._renderer = new THREE.WebGLRenderer();
-    this._scene = new THREE.Scene();
-    this._camera = new THREE.PerspectiveCamera(camfov, ratio, 1, 10000);
+    this.clock = new THREE.Clock();
+    this.renderer = new THREE.WebGLRenderer();
+    this.scene = new THREE.Scene();
+    this.camera = new THREE.PerspectiveCamera(camfov, ratio, 1, 10000);
+    this.camera.position.copy(campos);
 
     if (colors.ambient !== undefined)
     {
 
         var ambient = new THREE.AmbientLight(colors.ambient, 0.5);
-        this._scene.add(ambient);
+        this.scene.add(ambient);
 
     }
 
-    this._renderer.setSize(width, height);
-    this._renderer.setClearColor(colors.clear);
-    this._camera.position.copy(campos);
+    this.renderer.setSize(width, height);
+    this.renderer.setClearColor(colors.clear);
+    this.scene.add(light);
+    this.scene.add(this.camera);
 
-    this._scene.add(light);
-    this._scene.add(this._camera);
+    this.domParent.append(this.renderer.domElement);
 
-    this._parent.append(this._renderer.domElement);
+    $(window).resize(function() {
 
-    $(window).resize(this._reset.bind(this));
+        var width = this.domParent.innerWidth();
+        var height = this.domParent.innerHeight();
+        this.renderer.setSize(width, height);
+        this.camera.aspect = width/height;
+        this.camera.updateProjectionMatrix();
+
+    }.bind(this));
 
 };
 
 Object.assign(GraphicsContext.prototype, {
 
-    _reset: function() {
-
-        var width = this._parent.innerWidth();
-        var height = this._parent.innerHeight();
-        this._renderer.setSize(width, height);
-        this._camera.aspect = width/height;
-        this._camera.updateProjectionMatrix();
-
-    },
-
-    _render: function() {
-
-        this._renderer.render(this._scene, this._camera);
-
-    },
-
     animate: function() {
 
-        var d = this._clock.getDelta();
-        var e = this._clock.getElapsedTime();
+        var d = this.clock.getDelta();
+        var e = this.clock.getElapsedTime();
 
         requestAnimationFrame(this.animate.bind(this));
-        this._render();
+        this.renderer.render(this.scene, this.camera);
 
     }
 

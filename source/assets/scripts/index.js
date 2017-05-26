@@ -4,9 +4,18 @@
  */
 
 //= context.js
+//= loader.js
 //= utils.js
 
+/**
+ * This function starts the WebGL rendering process:
+ *  - initializes graphics context;
+ *  - downloads the scene resources;
+ *  - starts the animation cycle.
+ */
 (function () {
+
+    if (!Modernizr.webgl) return; // Do nothing, if the WebGL is not supported by the current browser.
 
     var gc = new GraphicsContext('header', {
 
@@ -15,8 +24,11 @@
             light: 0xffffff,
             ambient: 0x0099cc
         },
-        camfow: 80,
-        campos: new THREE.Vector3(0, 0, 1000)
+
+        camera: {
+            position: new THREE.Vector3(0, 0, 1000),
+            fov: 75
+        }
 
     });
 
