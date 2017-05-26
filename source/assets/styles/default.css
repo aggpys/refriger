@@ -167,11 +167,11 @@ button:active {
 }
 
 .accent-warm {
-    color: #c33;
+    color: #f33;
 }
 
 .accent-cold {
-    color: #33c;
+    color: #33f;
 }
 
 .visible {
@@ -194,16 +194,16 @@ button:active {
 }
 
 .organization-welcome {
-    color: #333;
+    color: #444;
     font-size: 2.5em;
     margin-left: 32px;
     text-transform: uppercase;
 }
 
 .organization-about {
+    color: #555;
     margin: 24px 32px;
     font-size: 1.1em;
-    color: #000;
 }
 
 button#button-about {
@@ -222,6 +222,7 @@ header>canvas {
 }
 
 header>.header-content {
+    background-color: rgba(255, 255, 255, 0.5);
     position: relative;
     padding: 128px 0;
     z-index: 0;

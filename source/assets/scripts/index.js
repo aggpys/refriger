@@ -6,6 +6,7 @@
 //= context.js
 //= loader.js
 //= plane.js
+//= dynamic.js
 //= background.js
 //= utils.js
 
@@ -23,11 +24,7 @@
 
     var gc = new GraphicsContext('header', {
 
-        colors: {
-            clear: 0xffffff,
-            light: 0xffffff,
-            ambient: 0x0099cc
-        },
+        colors: { clear: 0xffffff },
 
         camera: {
             position: new THREE.Vector3(0, 0, 1000),
@@ -37,15 +34,51 @@
     });
 
     tm.add('background', 'background.jpg');
+    tm.add('particle-a', 'p1.png');
+    tm.add('particle-b', 'p2.png');
     tm.load(function(manager) {
 
         var scene = {
 
-            background: new Background(manager.get('background'))
+            background: new Background(manager.get('background')),
+            particles: []
+
+        }
+
+        for (var i = 0; i < 300; ++i) {
+
+            var startPosition = new THREE.Vector3(
+                Math.random() * 2048 - 1024,
+                Math.random() * 1024 - 512,
+                300 + Math.random() * 500
+            );
+
+            var particleType = Math.random() < 0.5 ? 'particle-a' : 'particle-b';
+            var size = 5 + Math.random() * 5;
+
+            var p = new DynamicPlane(manager.get(particleType), {
+
+                opacity: 0.1 + Math.random() * 0.9,
+                width: size,
+                height: size,
+                fadeSpeed: Math.random(),
+                delay: Math.random(),
+                restartPosition: startPosition,
+                position: startPosition,
+                blending: THREE.AdditiveBlending,
+                side: THREE.DoubleSide,
+                lifeTime: Math.random() * 150
+
+            });
+
+            scene.particles.push(p);
 
         }
 
         gc.add(scene.background);
+
+        for (var j = 0; j < scene.particles.length; ++j)
+            gc.add(scene.particles[j]);
 
     });
 

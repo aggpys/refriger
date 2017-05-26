@@ -3,10 +3,24 @@
  * Licensed under the MIT License. See LICENSE file for full license information.
  */
 
+/**
+ * Represents the adjustable background plane.
+ * @param texture Background texture.
+ * @param params An object that contains background plane parameters.
+ */
 var Background = function(texture, params) {
 
     Plane.apply(this, arguments);
-    $(window).resize((function() {
+    $(window).resize(this.adjust.bind(this));
+
+};
+
+Background.prototype = Object.create(Plane.prototype);
+Background.prototype.constructor = Background;
+
+Object.assign(Background.prototype, {
+
+    adjust: function() {
 
         var width = this.mesh.geometry.parameters.width;
         var height = this.mesh.geometry.parameters.height;
@@ -29,9 +43,13 @@ var Background = function(texture, params) {
         this.mesh.scale.x = scale;
         this.mesh.scale.y = scale;
 
-    }).bind(this));
+    },
 
-};
+    setContext: function(context) {
 
-Background.prototype = Object.create(Plane.prototype);
-Background.prototype.constructor = Background;
+        Plane.prototype.setContext.apply(this, arguments);
+        this.adjust();
+
+    }
+
+});

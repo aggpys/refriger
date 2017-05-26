@@ -12,7 +12,7 @@ var Plane = function(texture, params) {
 
     params = params || {};
 
-    var location = params.location !== undefined ? params.location : new THREE.Vector3(0, 0, 0);
+    var position = params.position !== undefined ? params.position : new THREE.Vector3(0, 0, 0);
     var textureWidth = texture !== undefined ? texture.image.width : 100;
     var textureHeight = texture !== undefined ? texture.image.height : 100;
 
@@ -45,7 +45,7 @@ var Plane = function(texture, params) {
     this.delay = params.delay !== undefined ? params.delay : 0.0;
     this.mesh = new THREE.Mesh(geometry, material);
     this.mesh.overdraw = true;
-    this.mesh.position.copy(location);
+    this.mesh.position.copy(position);
     this.context = undefined;
 
 };
