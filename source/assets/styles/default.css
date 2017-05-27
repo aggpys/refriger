@@ -206,6 +206,15 @@ button:active {
     font-size: 1.1em;
 }
 
+.phone-text {
+    color: #ccc;
+    display: block;
+}
+
+.phone-text.primary {
+    color: #fff;
+}
+
 button#button-about {
     margin-left: 32px;
 }
@@ -230,4 +239,28 @@ header>.header-content {
 
 html.canvas header {
     background: none;
+}
+
+section#contacts {
+    padding-bottom: 50px;
+    background-image: url('../images/contacts-tile.png');
+    background-color: #444;
+    color: #eee;
+}
+
+section#contacts h3 {
+    margin: 1em 0;
+    color: #fff;
+}
+
+section#contacts .contacts-phones,
+section#contacts .contacts-address {
+    padding-bottom: 1em;
+}
+
+div.map>iframe {
+    border: none;
+    width: 100%;
+    min-height: 256px;
+    margin-bottom: 1em;
 }
