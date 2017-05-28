@@ -1,0 +1,87 @@
+/**
+ * Copyright © 2017 Aleksey Grigoriev <aggpys@live.com>. All rights reserved.
+ * Licensed under the MIT License. See LICENSE file for full license information.
+ */
+
+header {
+    border-bottom: 1px solid rgba(230, 230, 230, 0.5);
+    background: url('../images/home.jpg') no-repeat center center;
+    background-size: cover;
+    position: relative;
+}
+
+html.webgl header {
+    background: none;
+}
+
+html.no-webgl canvas {
+    display: none;
+}
+
+header>canvas {
+    position: absolute;
+    top: 0px;
+    left: 0px;
+    z-index: -1;
+}
+
+header>.header-content {
+    background-color: rgba(255, 255, 255, 0.5);
+    position: relative;
+    padding: 128px 0;
+    z-index: 0;
+}
+
+header button {
+    background-color: transparent;
+    border: 1px solid #666;
+    font-size: 1.2em;
+    padding: 0.6em 1.2em;
+    transition: all 0.3s ease;
+    text-transform: uppercase;
+    margin-left: 32px;
+}
+
+header button:hover {
+    background-color: #c33;
+    border-color: transparent;
+    color: #eee;
+}
+
+header button:focus {
+    outline: none;
+    border-color: #c33;
+    border-style: dashed;
+}
+
+header button:active {
+    background-color: #933;
+    color: #aaa;
+}
+
+header .organization-name {
+    color: #333;
+    font-size: 1.2em;
+    line-height: 1.4em;
+    font-family: 'Open Sans', Helvetica, sans-serif;
+    text-transform: uppercase;
+}
+
+header .organization-logo {
+    padding: 10px 0;
+    max-width: 45%;
+    margin: 0 auto;
+}
+
+header .organization-welcome {
+    color: #444;
+    font-size: 2.5em;
+    margin-left: 32px;
+    text-transform: uppercase;
+}
+
+header .organization-about {
+    color: #555;
+    margin: 24px 32px;
+    font-size: 1.1em;
+}

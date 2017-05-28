@@ -1,0 +1,12 @@
+/**
+ * Copyright © 2017 Aleksey Grigoriev <aggpys@live.com>. All rights reserved.
+ * Licensed under the MIT License. See LICENSE file for full license information.
+ */
+
+@import url('https://fonts.googleapis.com/css?family=Open+Sans+Condensed:300|Open+Sans:400,700&subset=cyrillic');
+
+@import url('./default.css');
+@import url('./navigation.css');
+@import url('./header.css');
+@import url('./contacts.css');
+@import url('./footer.css');

@@ -1,0 +1,56 @@
+/**
+ * Copyright © 2017 Aleksey Grigoriev <aggpys@live.com>. All rights reserved.
+ * Licensed under the MIT License. See LICENSE file for full license information.
+ */
+
+section#contacts {
+    padding-bottom: 70px;
+    background-image: url('../images/contacts-tile.png');
+    background-color: #444;
+    color: #ddd;
+}
+
+section#contacts h3 {
+    margin: 20px 0;
+    color: #fff;
+}
+
+section#contacts .contacts-phones,
+section#contacts .contacts-address {
+    transition: color 0.3s ease;
+    padding-bottom: 1em;
+}
+
+section#contacts .contacts-data:hover .contacts-address {
+    color: #fff;
+}
+
+section#contacts a,
+section#contacts a:visited,
+section#contacts a:focus,
+section#contacts a:hover {
+    color: #fff;
+    text-decoration: underline;
+}
+
+section#contacts a>i {
+    text-decoration: none;
+    margin-right: 0.5em;
+}
+
+section#contacts div.map>iframe {
+    display: block;
+    border: none;
+    width: 100%;
+    min-height: 196px;
+    margin: 0px;
+}
+
+section#contacts .phone-text {
+    color: #ccc;
+    display: block;
+}
+
+section#contacts .phone-text.primary {
+    color: #fff;
+}

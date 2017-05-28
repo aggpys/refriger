@@ -1,0 +1,90 @@
+/**
+ * Copyright © 2017 Aleksey Grigoriev <aggpys@live.com>. All rights reserved.
+ * Licensed under the MIT License. See LICENSE file for full license information.
+ */
+
+.navbar-brand {
+    padding: 5px;
+    line-height: 40px;
+}
+
+.navbar-brand {
+    opacity: 0;
+    visibility: hidden;
+    transition: all 0.5s ease;
+}
+
+.navbar-brand>img {
+    float: left;
+    height: 100%;
+}
+
+.navbar-nav>li,
+.navbar-nav>li>a {
+    transition: all 0.5s ease;
+}
+
+.phone {
+    line-height: 50px;
+    vertical-align: middle;
+}
+
+.phone>a {
+    padding: 5px 10px;
+    border: 1px solid #ddd;
+    border-radius: 1em;
+    transition: all 0.3s ease-in;
+}
+
+.phone>a:hover {
+    border-color: transparent;
+    background-color: #33c;
+    color: #fff;
+}
+
+.phone>a:active {
+    background-color: #336;
+}
+
+.phone>a:hover>.phone-code {
+    color: #fff;
+}
+
+.phone>a,
+.phone>a:hover,
+.phone>a:active {
+    font-weight: bold;
+    text-decoration: none;
+}
+
+.phone>a>i.glyphicon {
+    padding-right: 0.5em;
+    color: #ccc;
+}
+
+.phone-code {
+    transition: all 0.3s ease-in;
+    font-weight: normal;
+    color: #33c;
+}
+
+.phone-code::before {
+    content: '(';
+}
+
+.phone-code::after {
+    content: ')';
+}
+
+.accent-warm {
+    color: #f33;
+}
+
+.accent-cold {
+    color: #33f;
+}
+
+.visible {
+    visibility: visible;
+    opacity: 1;
+}

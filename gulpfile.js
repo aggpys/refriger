@@ -99,10 +99,13 @@ gulp.task('copy:misc', function() {
  */
 gulp.task('bundle:css', function() {
 
-    return gulp.src(refriger.path.source.styles + '/default.css', { base : refriger.path.source.root })
+    return gulp.src(refriger.path.source.styles + '/index.css', { base : refriger.path.source.root })
         .pipe(plugins.if(gulp.debug, plugins.sourcemaps.init()))
         .pipe(plugins.postcss([cssimport, autoprefixer, cssnano]))
         .pipe(plugins.if(gulp.debug, plugins.sourcemaps.write()))
+        .pipe(plugins.rename(function(path) {
+            path.basename = 'site.min';
+        }))
         .pipe(gulp.dest(gulp.outdir));
 
 });
