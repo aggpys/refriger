@@ -17,6 +17,7 @@ const refriger = {
         source : {
 
             root : 'source',
+            files: 'source/files',
             assets : 'source/assets',
             images : 'source/assets/images',
             favicons : 'source/assets/favicons',
@@ -84,7 +85,8 @@ gulp.task('copy:images', function() {
 gulp.task('copy:misc', function() {
 
     return gulp.src([
-        refriger.path.source.root + '/*.{html,xml,txt}', 
+        refriger.path.source.root + '/*.{html,xml,txt}',
+        refriger.path.source.files + '/*.pdf',
         refriger.path.source.fonts + '/*.{ttf,eot,woff,woff2,svg}',
         refriger.path.source.styles + '/*.min.css',
         refriger.path.source.scripts + '/vendor/*.min.js'], { base : refriger.path.source.root })

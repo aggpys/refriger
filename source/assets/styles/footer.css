@@ -4,9 +4,46 @@
  */
 
 footer {
+    font-size: 0.9em;
     padding: 25px 0;
 }
 
 footer #year {
     color: #999;
+}
+
+footer div.copyright {
+    line-height: 0.9em;
+}
+
+footer ul.files {
+    font-size: 0;
+    margin: 10px 0;
+    padding: 0;
+}
+
+footer ul.files>li {
+    font-size: 13px;
+    display: inline-block;
+    list-style: none;
+    clear: both;
+}
+
+footer ul.files>li>span.separator {
+    padding: 0 0.9em;
+    color: #999;
+}
+
+@media (max-width: 767px) {
+    
+    footer .text-right, 
+    footer .text-left {
+        text-align: center;
+    } 
+
+    footer ul.files>li {
+        padding: 0.5em 0;
+        display: block;
+    }
+
 }
