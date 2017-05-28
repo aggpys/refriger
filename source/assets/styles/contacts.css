@@ -4,25 +4,31 @@
  */
 
 section#contacts {
-    padding-bottom: 70px;
+    padding-bottom: 50px;
     background-image: url('../images/contacts-tile.png');
-    background-color: #444;
+    background-color: #222;
     color: #ddd;
 }
 
 section#contacts h3 {
-    margin: 20px 0;
+    margin-top: 20px;
+    margin-bottom: 10px;
+    padding-bottom: 10px;
+    border-bottom: 1px solid;
     color: #fff;
+}
+
+section#contacts h3.header-office {
+    border-color: #f33;
+}
+
+section#contacts h3.header-base {
+    border-color: #39f;
 }
 
 section#contacts .contacts-phones,
 section#contacts .contacts-address {
-    transition: color 0.3s ease;
     padding-bottom: 1em;
-}
-
-section#contacts .contacts-data:hover .contacts-address {
-    color: #fff;
 }
 
 section#contacts a,
@@ -33,7 +39,11 @@ section#contacts a:hover {
     text-decoration: underline;
 }
 
-section#contacts a>i {
+section#contacts a:hover {
+    color: #ccc;
+}
+
+section#contacts i {
     text-decoration: none;
     margin-right: 0.5em;
 }
@@ -53,4 +63,12 @@ section#contacts .phone-text {
 
 section#contacts .phone-text.primary {
     color: #fff;
+}
+
+section#contacts .map-office {
+    color: #f33
+}
+
+section#contacts .map-base {
+    color: #39f
 }
