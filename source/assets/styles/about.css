@@ -1,0 +1,33 @@
+/**
+ * Copyright © 2017 Aleksey Grigoriev <aggpys@live.com>. All rights reserved.
+ * Licensed under the MIT License. See LICENSE file for full license information.
+ */
+
+section#about {
+    padding: 70px 0;
+}
+
+section#about p {
+    line-height: 2em;
+    margin-bottom: 2em;
+}
+
+section#about .brand {
+    color: #c33;
+}
+
+section#about ul {
+    padding: 0;
+    margin: 0;
+}
+
+section#about ul>li {
+    background-color: #eef;
+    border: 1px solid #33c;
+    color: #33c;
+    padding: 0.5em 0;
+    margin: 0.5em 0;
+    list-style: none;
+    text-align: center;
+    display: block;
+}

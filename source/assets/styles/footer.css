@@ -30,6 +30,7 @@ footer ul.files>li {
 }
 
 footer ul.files>li>span.separator {
+    user-select: none;
     padding: 0 0.9em;
     color: #999;
 }
