@@ -57,6 +57,9 @@ $('.job-title').click(function() {
 $('button').click(function(){
 
     var id = $(this).data('href');
+
+    if (id === undefined) return;
+
     var scrollValue = $(id).offset().top;
     
     $('html, body').animate({
