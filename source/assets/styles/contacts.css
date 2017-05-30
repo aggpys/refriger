@@ -3,14 +3,14 @@
  * Licensed under the MIT License. See LICENSE file for full license information.
  */
 
-section#contacts {
+#contacts {
     padding-bottom: 50px;
     background-image: url('../images/contacts-tile.png');
     background-color: #222;
     color: #ddd;
 }
 
-section#contacts h3 {
+#contacts h3 {
     margin-top: 20px;
     margin-bottom: 10px;
     padding-bottom: 10px;
@@ -18,37 +18,37 @@ section#contacts h3 {
     color: #fff;
 }
 
-section#contacts h3.header-office {
+#contacts .header-office {
     border-color: #f33;
 }
 
-section#contacts h3.header-base {
+#contacts .header-base {
     border-color: #39f;
 }
 
-section#contacts .contacts-phones,
-section#contacts .contacts-address {
+#contacts .contacts-phones,
+#contacts .contacts-address {
     padding-bottom: 1em;
 }
 
-section#contacts a,
-section#contacts a:visited,
-section#contacts a:focus,
-section#contacts a:hover {
+#contacts a,
+#contacts a:visited,
+#contacts a:focus,
+#contacts a:hover {
     color: #fff;
     text-decoration: underline;
 }
 
-section#contacts a:hover {
+#contacts a:hover {
     color: #ccc;
 }
 
-section#contacts i {
+#contacts i {
     text-decoration: none;
     margin-right: 0.5em;
 }
 
-section#contacts div.map>iframe {
+#contacts .map>iframe {
     display: block;
     border: none;
     width: 100%;
@@ -56,19 +56,19 @@ section#contacts div.map>iframe {
     margin: 0px;
 }
 
-section#contacts .phone-text {
+#contacts .phone-text {
     color: #ccc;
     display: block;
 }
 
-section#contacts .phone-text.primary {
+#contacts .phone-text.primary {
     color: #fff;
 }
 
-section#contacts .map-office {
+#contacts .map-office {
     color: #f33
 }
 
-section#contacts .map-base {
+#contacts .map-base {
     color: #39f
 }

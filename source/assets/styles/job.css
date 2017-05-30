@@ -3,23 +3,23 @@
  * Licensed under the MIT License. See LICENSE file for full license information.
  */
 
-section#job {
+#job {
     padding-bottom: 70px;
     background-color: #eee;
 }
 
-section#job h2 {
+#job h2 {
     text-transform: uppercase;
     padding: 20px 0;
     margin: 0;
 }
 
-section#job ul.job-list {
+#job ul {
     list-style: none;
     padding: 0;
 }
 
-section#job ul.job-list li.job {
+#job ul>li {
     display: block;
     position: relative;
     border-bottom: 1px solid #ddd;
@@ -31,7 +31,13 @@ section#job ul.job-list li.job {
     cursor: pointer;
 }
 
-section#job ul.job-list div.job-background {
+#job ul>li:hover,
+#job ul>li:active {
+    background-color: #fff;
+    border-color: #ccc;
+}
+
+#job .job-background {
     position: absolute;
     top: 0;
     right: 0;
@@ -42,38 +48,38 @@ section#job ul.job-list div.job-background {
     z-index: 0;
 }
 
-section#job ul.job-list div.job-a {
+#job .job-a {
     background-position-y: 0px;
 }
 
-section#job ul.job-list div.job-b {
+#job .job-b {
     background-position-y: -128px;
 }
 
-section#job ul.job-list div.job-c {
+#job .job-c {
     background-position-y: -256px;
 }
 
-section#job ul.job-list div.job-d {
+#job .job-d {
     background-position-y: -384px;
 }
-section#job ul.job-list div.job-e {
+#job .job-e {
     background-position-y: -512px;
 }
 
-section#job ul.job-list div.job-f {
+#job .job-f {
     background-position-y: -640px;
 }
 
-section#job ul.job-list div.job-g {
+#job .job-g {
     background-position-y: -768px;
 }
 
-section#job ul.job-list div.job-h {
+#job .job-h {
     background-position-y: -896px;
 }
 
-section#job ul.job-list div.job-title {
+#job .job-title {
     color: #111;
     position: relative;
     padding-left: 1em;
@@ -82,26 +88,20 @@ section#job ul.job-list div.job-title {
     height: 128px;
 }
 
-section#job ul.job-list div.job-title>h3 {
+#job .job-title>h3 {
     font-size: 1.4em;
     margin-bottom: 10px;
     color: #c33;
 }
 
 @media (max-width: 767px) { 
-    section#job ul.job-list div.job-title {
+    #job .job-title {
         background-color: rgba(255, 255, 255, 0.8);
         padding-right: 1em;
     }
 }
 
-section#job ul.job-list li:hover,
-section#job ul.job-list li:active {
-    background-color: #fff;
-    border-color: #ccc;
-}
-
-section#job ul.job-list div.job-details {
+#job .job-details {
     margin: 0;
     padding: 1em;
     background-color: #ddd;
@@ -109,6 +109,6 @@ section#job ul.job-list div.job-details {
     cursor: default;
 }
 
-section#job ul.job-list li>.collapsed {
+#job ul>li>.collapsed {
     display: none;
 }

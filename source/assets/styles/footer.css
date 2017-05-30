@@ -12,24 +12,24 @@ footer #year {
     color: #999;
 }
 
-footer div.copyright {
+footer .copyright {
     line-height: 0.9em;
 }
 
-footer ul.files {
+footer ul {
     font-size: 0;
     margin: 10px 0;
     padding: 0;
 }
 
-footer ul.files>li {
+footer ul>li {
     font-size: 13px;
     display: inline-block;
     list-style: none;
     clear: both;
 }
 
-footer ul.files>li>span.separator {
+footer ul>li>.separator {
     user-select: none;
     padding: 0 0.9em;
     color: #999;
@@ -42,7 +42,7 @@ footer ul.files>li>span.separator {
         text-align: center;
     } 
 
-    footer ul.files>li {
+    footer ul>li {
         padding: 0.5em 0;
         display: block;
     }

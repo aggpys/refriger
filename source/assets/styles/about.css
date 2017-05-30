@@ -3,25 +3,25 @@
  * Licensed under the MIT License. See LICENSE file for full license information.
  */
 
-section#about {
+#about {
     padding: 70px 0;
 }
 
-section#about p {
+#about p {
     line-height: 2em;
     margin-bottom: 2em;
 }
 
-section#about .brand {
+#about .brand {
     color: #c33;
 }
 
-section#about ul {
+#about ul {
     padding: 0;
     margin: 0;
 }
 
-section#about ul>li {
+#about ul>li {
     background-color: #eef;
     border: 1px solid #33c;
     color: #33c;
