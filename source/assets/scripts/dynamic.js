@@ -29,9 +29,9 @@ Object.assign(DynamicPlane.prototype, {
     randomizeVelocity: function() {
 
         return new THREE.Vector3(
-            (Math.random() - 0.5) / 10,
-            (Math.random() - 0.5) / 10,
-            (Math.random() - 0.5) / 10
+            (Math.random() - 0.5) / 5,
+            (Math.random() - 0.5) / 5,
+            (Math.random() - 0.5) / 5
         );
 
     },

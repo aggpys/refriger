@@ -54,11 +54,11 @@
             );
 
             var particleType = Math.random() < 0.5 ? 'particle-a' : 'particle-b';
-            var size = 5 + Math.random() * 5;
+            var size = 6 + Math.random() * 6;
 
             var p = new DynamicPlane(manager.get(particleType), {
 
-                opacity: 0.1 + Math.random() * 0.9,
+                opacity: 0.3 + Math.random() * 0.7,
                 width: size,
                 height: size,
                 fadeSpeed: Math.random(),

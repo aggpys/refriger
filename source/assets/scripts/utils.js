@@ -47,3 +47,21 @@ $(document).ready(function() {
         $('#year').append(" ‒ " + currentYear);
 
 });
+
+$('.job-title').click(function() {
+
+    $(this).parent().children('.job-details').toggleClass('collapsed');
+
+});
+
+$('button').click(function(){
+
+    var id = $(this).data('href');
+    var scrollValue = $(id).offset().top;
+    
+    $('html, body').animate({
+        scrollTop: scrollValue
+    }, 400, function() {
+        window.location.hash = id;
+    });
+});

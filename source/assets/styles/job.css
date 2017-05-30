@@ -1,0 +1,114 @@
+/**
+ * Copyright © 2017 Aleksey Grigoriev <aggpys@live.com>. All rights reserved.
+ * Licensed under the MIT License. See LICENSE file for full license information.
+ */
+
+section#job {
+    padding-bottom: 70px;
+    background-color: #eee;
+}
+
+section#job h2 {
+    text-transform: uppercase;
+    padding: 20px 0;
+    margin: 0;
+}
+
+section#job ul.job-list {
+    list-style: none;
+    padding: 0;
+}
+
+section#job ul.job-list li.job {
+    display: block;
+    position: relative;
+    border-bottom: 1px solid #ddd;
+    background-size: 210px 128px;
+    background-position: right top;
+    background-repeat: no-repeat;
+    min-height: 128px;
+    transition: all 0.5s ease;
+    cursor: pointer;
+}
+
+section#job ul.job-list div.job-background {
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 210px;
+    height: 128px;
+    background: url('../images/job-map.png') no-repeat;
+    background-size: 210px 1024px;
+    z-index: 0;
+}
+
+section#job ul.job-list div.job-a {
+    background-position-y: 0px;
+}
+
+section#job ul.job-list div.job-b {
+    background-position-y: -128px;
+}
+
+section#job ul.job-list div.job-c {
+    background-position-y: -256px;
+}
+
+section#job ul.job-list div.job-d {
+    background-position-y: -384px;
+}
+section#job ul.job-list div.job-e {
+    background-position-y: -512px;
+}
+
+section#job ul.job-list div.job-f {
+    background-position-y: -640px;
+}
+
+section#job ul.job-list div.job-g {
+    background-position-y: -768px;
+}
+
+section#job ul.job-list div.job-h {
+    background-position-y: -896px;
+}
+
+section#job ul.job-list div.job-title {
+    color: #111;
+    position: relative;
+    padding-left: 1em;
+    padding-right: 210px;
+    padding-top: 1em;
+    height: 128px;
+}
+
+section#job ul.job-list div.job-title>h3 {
+    font-size: 1.4em;
+    margin-bottom: 10px;
+    color: #c33;
+}
+
+@media (max-width: 767px) { 
+    section#job ul.job-list div.job-title {
+        background-color: rgba(255, 255, 255, 0.8);
+        padding-right: 1em;
+    }
+}
+
+section#job ul.job-list li:hover,
+section#job ul.job-list li:active {
+    background-color: #fff;
+    border-color: #ccc;
+}
+
+section#job ul.job-list div.job-details {
+    margin: 0;
+    padding: 1em;
+    background-color: #ddd;
+    border-top: 1px solid #ccc;
+    cursor: default;
+}
+
+section#job ul.job-list li>.collapsed {
+    display: none;
+}
