@@ -175,3 +175,21 @@
     text-align: center;
     line-height: 50%;
 }
+
+#job .img-ability {
+    opacity: 0.7;
+    background-color: #33f;
+    transition: all 0.5s ease;
+    padding: 1em;
+}
+
+#job .img-ability:hover {
+    opacity: 1.0;
+}
+
+#job .ability-title {
+    margin-top: 0.1em;
+    background-color: #ddd;
+    text-align: center;
+    padding: 0.5em 0;
+}
