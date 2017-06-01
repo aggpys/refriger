@@ -9,9 +9,10 @@
 }
 
 #job h2 {
+    text-align: center;
     text-transform: uppercase;
     padding: 20px 0;
-    margin: 0;
+    margin-bottom: 1em;
 }
 
 #job ul.job-list {
@@ -102,11 +103,31 @@
     color: #c33;
 }
 
-@media (max-width: 767px) { 
+#job .img-sample {
+    border: 1em solid #eee;
+    opacity: 0.5;
+    transition: all 0.5s ease;
+    margin-top: 1em;
+    margin-bottom: 1em;
+}
+
+#job .img-sample:hover {
+    opacity: 1.0;
+    border-color: #ddd;
+}
+
+@media (max-width: 767px) {
+
     #job .job-title {
         background-color: rgba(255, 255, 255, 0.8);
         padding-right: 1em;
     }
+
+    #job .img-sample {
+        opacity: 1.0;
+        border-width: 3px;
+    }
+
 }
 
 #job .job-details {
