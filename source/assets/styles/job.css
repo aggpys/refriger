@@ -5,7 +5,6 @@
 
 #job {
     padding-bottom: 70px;
-    background-color: #eee;
 }
 
 #job h2 {
@@ -38,7 +37,7 @@
 
 #job ul.job-list>li:hover,
 #job ul.job-list>li:focus {
-    background-color: #fff;
+    background-color: #eee;
     border-color: #ccc;
 }
 
@@ -131,7 +130,7 @@
 
 #job .job-details {
     margin: 0;
-    padding: 1em;
+    padding: 1em 0;
     background-color: #fff;
     border-top: 1px solid #ddd;
     cursor: default;

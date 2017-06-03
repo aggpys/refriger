@@ -37,9 +37,13 @@ header button {
     border: 1px solid #666;
     font-size: 1.2em;
     padding: 0.6em 1.2em;
+    margin-left: 32px;
     transition: all 0.3s ease;
     text-transform: uppercase;
-    margin-left: 32px;
+}
+
+header button.button-xs {
+    margin: 1em auto;
 }
 
 header button:hover {
