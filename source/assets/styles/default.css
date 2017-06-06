@@ -40,9 +40,8 @@ h3 {
     color: #333;
 }
 
-body,
-section {
-    padding-top: 50px;
+body {
+    overflow-x: hidden;
 }
 
 a,

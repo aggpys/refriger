@@ -1,0 +1,7 @@
+{
+    "api_version": 4,
+    "layout": {
+        "logo": "./assets/images/widgets/tableau-logo.png",
+        "color": "#333333"
+    }
+}

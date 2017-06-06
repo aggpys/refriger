@@ -85,7 +85,7 @@ gulp.task('copy:images', function() {
 gulp.task('copy:misc', function() {
 
     return gulp.src([
-        refriger.path.source.root + '/*.{html,xml,txt}',
+        refriger.path.source.root + '/*.{html,xml,json,txt}',
         refriger.path.source.files + '/*.pdf',
         refriger.path.source.fonts + '/*.{ttf,eot,woff,woff2,svg}',
         refriger.path.source.styles + '/*.min.css',
@@ -106,7 +106,7 @@ gulp.task('bundle:css', function() {
         .pipe(plugins.postcss([cssimport, autoprefixer, cssnano]))
         .pipe(plugins.if(gulp.debug, plugins.sourcemaps.write()))
         .pipe(plugins.rename(function(path) {
-            path.basename = 'site.min';
+            path.basename = 'default.min';
         }))
         .pipe(gulp.dest(gulp.outdir));
 

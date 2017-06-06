@@ -88,3 +88,7 @@
     visibility: visible;
     opacity: 1;
 }
+
+nav ul>li:hover {
+    background: #eee;
+}

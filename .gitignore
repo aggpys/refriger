@@ -57,8 +57,9 @@ typings/
 # dotenv environment variables file
 .env
 
-# Website builds directory
+# Website directories
 build
+backup
 
 # Thumbs.db
 Thumbs.db
