@@ -4,6 +4,7 @@
  */
 
 footer {
+    background: url('../images/footer-tile.png') repeat-x;
     padding: 25px 0;
     font-size: 0.9em;
 }
@@ -26,7 +27,7 @@ footer ul>li {
     transition: all 0.5s;
     border: 1px solid #eee;
     border-radius: 0.5em;
-    padding: 0.5em;
+    padding: 5px;
     list-style: none;
     display: inline-block;
 }
