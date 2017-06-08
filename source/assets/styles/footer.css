@@ -17,26 +17,44 @@ footer .copyright {
     line-height: 0.9em;
 }
 
+footer img {
+    margin: 0.5em 0;
+}
+
+footer h3 {
+    border-bottom: 1px solid #9a9acc;
+    text-transform: uppercase;
+    font-family: 'Open Sans', Helvetica, sans-serif;
+    font-weight: 400;
+    font-size: 1em;
+    color: #9a9acc;
+    padding-bottom: 0.5em;
+}
+
+footer h3>i {
+    margin-right: 0.5em;
+}
+
 footer ul {
-    background: url('../images/icons/download.svg') no-repeat left center;
-    background-size: 1.5em;
-    padding-left: 26px;
+    padding: 0;
 }
 
 footer ul>li {
-    transition: all 0.5s;
-    border: 1px solid #eee;
-    border-radius: 0.5em;
-    padding: 5px;
+    margin-top: 0.5em;
     list-style: none;
-    display: inline-block;
 }
 
-footer ul>li:hover,
-footer ul>li:active,
-footer ul>li:focus {
-    background-color: #eee;
-    border-color: #ddd;
+footer .developer {
+    color: #ddd;
+}
+
+footer .row {
+    margin-top: 5px;
+}
+
+footer .go {
+    float: left;
+    padding-right: 2em;
 }
 
 @media (max-width: 767px) {
@@ -46,22 +64,19 @@ footer ul>li:focus {
         text-align: center;
     } 
 
+    footer .go {
+        float: initial;
+        padding-right: 0;
+    }
+
     footer ul {
-        background: none;
-        padding: 0;
+        display: block;
     }
 
     footer ul>li {
         padding: 0.5em 0;
-        display: block;
         margin-top: 5px;
-        background-color: #eee;
-        border-color: #ddd;
-    }
-
-    footer ul>li:active,
-    footer ul>li:focus {
-        border-color: #ccc;
+        text-align: center;
     }
 
 }
