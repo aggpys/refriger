@@ -11,7 +11,7 @@ $(document).on('click', 'a', function(event) {
     var id = $.attr(this, 'href');
     var scrollValue = 0;
 
-    if (id.startsWith('#') && id.length > 1) {
+    if (id !== undefined && id.startsWith('#') && id.length > 1) {
         scrollValue = $(id).offset().top;
     } else if (!id.startsWith('#'))
         return;
@@ -39,12 +39,21 @@ $(document).on('scroll', function() {
 
 $(document).ready(function() {
 
-    var element = $('#year');
+    var yearSpan = $('#year');
     var currentYear = new Date().getFullYear();
-    var pageYear = parseInt(element.html());
+    var pageYear = parseInt(yearSpan.html());
 
     if (pageYear < currentYear)
         $('#year').append(" ‒ " + currentYear);
+
+    var mailSpan = $('#sm');
+
+    var mailAnchor = document.createElement('a');
+
+    mailAnchor.href = "mailto:info@refriger.ru";
+    mailAnchor.innerHTML = "info@refriger.ru";
+
+    mailSpan.html(mailAnchor);
 
 });
 

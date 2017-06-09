@@ -57,7 +57,7 @@
     text-decoration: none;
 }
 
-.phone>a>i.glyphicon {
+.phone>a>i {
     padding-right: 0.5em;
     color: #ccc;
 }
