@@ -4,7 +4,7 @@
  */
 
 #contacts {
-    padding: 50px 0;
+    padding: 64px 0;
     background-image: url('../images/contacts-tile.png');
     background-color: #222;
     color: #ddd;
@@ -14,25 +14,16 @@
     font-size: 1.5em;
     font-weight: 300;
     text-transform: uppercase;
-    text-align: center;
-    margin-top: 20px;
-    margin-bottom: 10px;
+    margin-top: 2em;
     color: #fff;
 }
 
-#contacts h3::before {
-    content: ' ';
-    display: block;
-    clear: both;
-}
-
 #contacts address {
-    border-top: 1px solid;
-    margin: 1em 0; 
+    margin-bottom: 0;
 }
 
 #contacts address>div {
-    margin: 1em 0;
+    margin-top: 1em;
     min-width: 160px;
     float: left;
 }
@@ -45,14 +36,6 @@
 #contacts address>div.phone-list {
     min-width: 120px;
     width: 40%;
-}
-
-#contacts address.office {
-    border-color: #c33;
-}
-
-#contacts address.production {
-    border-color: #33c;
 }
 
 #contacts a,
