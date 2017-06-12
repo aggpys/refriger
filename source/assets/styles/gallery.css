@@ -1,0 +1,11 @@
+#gallery {
+    padding: 64px 0;
+}
+
+#gallery img {
+    margin: 0 auto;
+}
+
+#gallery div {
+    outline: none;
+}

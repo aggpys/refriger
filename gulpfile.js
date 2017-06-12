@@ -137,7 +137,7 @@ gulp.task('build:serve', ['copy:misc', 'copy:images', 'copy:favicons', 'bundle:c
 
     });
 
-    gulp.watch(refriger.path.source.styles + '/*.css', ['bundle:css']);
+    gulp.watch(refriger.path.source.styles + '/**/*.css', ['bundle:css']);
     gulp.watch(refriger.path.source.scripts + '/*.js', ['bundle:js']);
     gulp.watch(refriger.path.source.root + '/*.html', ['copy:misc']);
     gulp.watch(refriger.path.source.images + '/**/*.{png,jpg,svg}', ['copy:images']);

@@ -3,22 +3,22 @@
  * Licensed under the MIT License. See LICENSE file for full license information.
  */
 
-.navbar-brand {
+nav .navbar-brand {
     padding: 10px;
 }
 
-.navbar-brand {
+nav .navbar-brand {
     opacity: 0;
     visibility: hidden;
     transition: all 0.5s ease;
 }
 
-.navbar-brand>img {
+nav .navbar-brand>img {
     float: left;
     height: 100%;
 }
 
-.brand-text {
+nav .brand-text {
     display: block;
     position: absolute;
     width: 100%;
@@ -31,21 +31,21 @@
     color: #aaa;
 }
 
-.navbar-nav>li,
-.navbar-nav>li>a {
+nav .navbar-nav>li,
+nav .navbar-nav>li>a {
     text-transform: uppercase;
     transition: all 0.5s ease;
 }
 
-.accent-warm {
+nav .accent-warm {
     color: #f33;
 }
 
-.accent-cold {
+nav .accent-cold {
     color: #33f;
 }
 
-.visible {
+nav .visible {
     visibility: visible;
     opacity: 1;
 }

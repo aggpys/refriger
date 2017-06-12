@@ -79,9 +79,40 @@
     margin: 0;
 }
 
+#contacts .work {
+    padding-top: 1em;
+    line-height: 2em;
+}
+
+#contacts .work>span {
+    padding: 0.5em;
+    white-space: nowrap;
+    background-color: #33c;
+    border-radius: 5px;
+}
+
+#contacts .work>span.weekend {
+    background-color: #c33;
+}
+
+#contacts .work>span.time {
+    background-color: #eee;
+    color: #333;
+}
+
+#contacts .work>span.time::before {
+    content: '\f017';
+    font-family: 'FontAwesome';
+    margin-right: 0.5em;
+}
+
 @media screen and (max-width: 400px) {
     #contacts h3 {
         font-size: 1em;
+    }
+
+    #contacts .work>span {
+        font-size: 0.8em;
     }
 
     #contacts address>div.post,

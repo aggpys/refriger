@@ -39,6 +39,15 @@ $(document).on('scroll', function() {
 
 $(document).ready(function() {
 
+    $('.photo-preview').slick({
+        slidesToShow: 1,
+        slidesToScroll: 1,
+        adaptiveHeight: true,
+        arrows: false,
+        dots: true,
+        fade: true
+    });
+
     var yearSpan = $('#year');
     var currentYear = new Date().getFullYear();
     var pageYear = parseInt(yearSpan.html());

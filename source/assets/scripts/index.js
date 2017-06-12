@@ -8,6 +8,7 @@
 //= plane.js
 //= dynamic.js
 //= background.js
+//= slick.js
 //= utils.js
 
 /**
