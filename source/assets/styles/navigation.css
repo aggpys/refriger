@@ -4,8 +4,8 @@
  */
 
 .navbar-brand {
-    padding: 5px;
-    line-height: 40px;
+    padding: 0;
+    margin-right: 1em;
 }
 
 .navbar-brand {
@@ -21,59 +21,8 @@
 
 .navbar-nav>li,
 .navbar-nav>li>a {
+    text-transform: uppercase;
     transition: all 0.5s ease;
-}
-
-.phone {
-    line-height: 50px;
-    vertical-align: middle;
-}
-
-.phone>a {
-    padding: 5px 10px;
-    border: 1px solid #ddd;
-    border-radius: 1em;
-    transition: all 0.3s ease-in;
-}
-
-.phone>a:hover {
-    border-color: transparent;
-    background-color: #33c;
-    color: #fff;
-}
-
-.phone>a:active {
-    background-color: #336;
-}
-
-.phone>a:hover>.phone-code {
-    color: #fff;
-}
-
-.phone>a,
-.phone>a:hover,
-.phone>a:active {
-    font-weight: bold;
-    text-decoration: none;
-}
-
-.phone>a>i {
-    padding-right: 0.5em;
-    color: #ccc;
-}
-
-.phone-code {
-    transition: all 0.3s ease-in;
-    font-weight: normal;
-    color: #33c;
-}
-
-.phone-code::before {
-    content: '(';
-}
-
-.phone-code::after {
-    content: ')';
 }
 
 .accent-warm {
@@ -87,8 +36,4 @@
 .visible {
     visibility: visible;
     opacity: 1;
-}
-
-nav ul>li:hover {
-    background: #eee;
 }

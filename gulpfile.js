@@ -122,7 +122,7 @@ gulp.task('bundle:js', function() {
         .pipe(plugins.if(gulp.debug, plugins.sourcemaps.init()))
         .pipe(plugins.if(gulp.debug, plugins.sourcemaps.write()))
         .pipe(plugins.rename(function(path) {
-            path.basename = 'at.min';
+            path.basename = 'refriger.min';
         }))
         .pipe(gulp.dest(gulp.outdir));
 

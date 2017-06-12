@@ -42,6 +42,7 @@
 
     <nav id="navigation" class="navbar navbar-default navbar-fixed-top">
         <div class="container">
+            <a id="brand-logo" class="navbar-brand" href="#navigation"><img class="hidden-sm img-responsive" src="./assets/images/logo.svg" alt="ООО «AиТ»" title="Инженерный центр энергоэффективных холодильных технологий и автоматики"></a>
             <div class="navbar-header">
                 <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
                     <span class="sr-only"></span>
@@ -49,35 +50,38 @@
                     <span class="icon-bar"></span>
                     <span class="icon-bar"></span>
                 </button>
-                <a id="brand-logo" class="navbar-brand" href="#"><img class="hidden-sm img-responsive" src="./assets/images/logo.svg" alt="ООО «AиТ»" title="Инженерный центр энергоэффективных холодильных технологий и автоматики"></a>
-                <div class="phone text-center visible-xs text-nowrap"><a href="tel:+78123653534"><i class="fa fa-phone"></i>8 <span class="phone-code">812</span> 365 35 34</a></div>
             </div>
             <div id="navbar" class="navbar-collapse collapse">
                 <ul class="nav navbar-nav">
-                    <li><a href="#about">Компания</a></li>
+                    <li><a href="#compain">Компания</a></li>
                     <li><a href="#job">Деятельность</a></li>
                     <li><a href="#clients">Клиенты</a></li>
                     <li><a href="#partners">Партнёры</a></li>
                     <li><a href="#gallery">Фотогалерея</a></li>
                     <li><a href="#contacts">Контакты</a></li>
                 </ul>
-                <div class="phone hidden-xs hidden-sm pull-right"><a href="tel:+78123653534"><i class="fa fa-phone"></i>8 <span class="phone-code">812</span> 365 35 34</a></div>
             </div>
         </div>
     </nav>
 
     <header id="home">
-        <div class="header-content clearfix">
+        <div class="header-content">
             <div class="container">
                 <div class="row">
-                    <div class="col-md-5 text-center">
-                        <img class="organization-logo img-responsive" src="./assets/images/logo.svg" alt="ООО «AиТ»">
-                        <h3 class="organization-name">Инженерный центр<br>энергоэффективных<br>холодильных технологий<br>и автоматики</h3>
-                        <button class="button-xs visible-xs visible-sm" data-href="#job">Подробнее</button>
+                    <div class="col-xs-12 text-center">
+                        <img class="img-responsive" src="./assets/images/logo.svg" alt="Инженерный центр энергоэффективных холодильных технологий и автоматики">
                     </div>
-                    <div class="col-md-7 hidden-sm hidden-xs">
-                        <h3 class="organization-welcome"><span class="accent-warm">Теплое</span> отношение к <span class="accent-cold">холоду</span></h3>
-                        <p class="organization-about">Коллектив инженеров с многолетним научно-практическим опытом работы в сфере промышленных холодильных технологий и автоматики, инженерных систем и пищевых производств</p>
+                </div>
+                <div class="row">
+                    <div class="col-xs-12 text-center">
+                        <hgroup>
+                            <h3><span class="accent-warm">Тёплое</span> отношение к <span class="accent-cold">холоду</span></h3>
+                            <h4>Инженерный центр энергоэффективных холодильных технологий и автоматики</h4>
+                        </hgroup>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-xs-12 text-center">
                         <button data-href="#job">Подробнее</button>
                     </div>
                 </div>
@@ -85,7 +89,7 @@
         </div>
     </header>
 
-    <section>HUE</section>
+    <section id="compain">HUE</section>
 
     <section id="contacts">
         <div class="container">
@@ -93,35 +97,31 @@
                 <div class="col-xs-12"><script type="text/javascript" charset="utf-8" async src="https://api-maps.yandex.ru/services/constructor/1.0/js/?um=constructor%3A84adc2d91228de371ca9d381352c38f43adbd7ef7f75c812782c5af28b187923&amp;width=100%25&amp;height=320&amp;lang=ru_RU&amp;scroll=true"></script></div>
             </div>
             <div class="row">
-                <div class="col-sm-6">
-                    <div class="row">
-                        <div class="col-xs-12"><h3 class="header-office"><i class="fa fa-home map-office"></i>Главный офис</h3></div>
-                    </div>
-                    <div class="row">
-                        <div class="col-md-6 contacts-address">
+                <div class="col-sm-6 clearfix">
+                    <h3><i class="fa fa-home map-office"></i>Главный офис</h3>
+                    <address class="office">
+                        <div class="post">
                             <p>ул. Ольминского, д.6,<br>Санкт-Петербург, 192029<br>Россия</p>
                             <i class="fa fa-envelope"></i><span id="sm"></span>
                         </div>
-                        <div class="col-md-6 contacts-phones">
-                            <span class="phone-text primary">8 (812) 365-35-34</span>
-                            <span class="phone-text">8 (812) 365-38-26</span>
-                            <span class="phone-text">8 (812) 365-38-08</span>
+                        <div class="phone-list">
+                            <span><a href="tel:+78123653534">8 (812) 365-35-34</a></span>
+                            <span>8 (812) 365-38-26</span>
+                            <span>8 (812) 365-38-08</span>
                         </div>
-                    </div>
+                    </address>
                 </div>
-                <div class="col-sm-6">
-                    <div class="row">
-                        <div class="col-xs-12"><h3 class="header-base"><i class="fa fa-wrench map-base"></i>Производственная база</h3></div>
-                    </div>
-                    <div class="row">
-                        <div class="col-md-6 contacts-address">
+                <div class="col-sm-6 clearfix">
+                    <h3><i class="fa fa-wrench map-production"></i>Производственная база</h3>
+                    <address class="production">
+                        <div class="post">
                             <p>Южное шоссе, д.37, корп.4,<br>Санкт-Петербург, 192241<br>Россия</p>
-                            <p class="text-muted">Въезд с Агатова переулка</p>
+                            <p class="road-hint">Въезд с Агатова переулка</p>
                         </div>
-                        <div class="col-md-6 contacts-phones">
-                            <span class="phone-text primary">8 (812) 269-63-22</span>
+                        <div class="phone-list">
+                            <span><a href="tel:+78122696322">8 (812) 269-63-22</a></span>
                         </div>
-                    </div>
+                    </address>
                 </div>
             </div>
         </div>
@@ -133,7 +133,7 @@
                 <div class="col-xs-12 col-sm-4 col-sm-push-8 text-center">
                     <a href="#" title="Коллективный член Международной Академии Холода (IAR)"><img alt="Коллективный член Международной Академии Холода (IAR)" src="./assets/images/iar-logo.jpg"></a>
                 </div>
-                <div class="col-xs-12 col-sm-8 col-sm-pull-4">
+                <div class="col-sm-8 col-sm-pull-4 hidden-xs">
                     <div class="go">
                         <h3><i class="fa fa-save"></i>Файлы</h3>
                         <ul>
@@ -143,7 +143,7 @@
                         </ul>
                     </div>
                     <div class="go">
-                        <h3><i class="fa fa-cap"></i>Сайт</h3>
+                        <h3><i class="fa fa-cap"></i>Информация</h3>
                         <ul>
                             <li><a href="/policy" target="blank">Политика конфиденциальности</a></li>
                         </ul>
@@ -163,6 +163,6 @@
 <script src="./assets/scripts/vendor/jquery-3.2.1.min.js"></script>
 <script src="./assets/scripts/vendor/bootstrap.min.js"></script>
 <script src="./assets/scripts/vendor/three.min.js"></script>
-<script src="./assets/scripts/at.min.js"></script>
+<script src="./assets/scripts/refriger.min.js"></script>
 
 </html>

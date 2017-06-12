@@ -11,24 +11,48 @@
 }
 
 #contacts h3 {
+    font-size: 1.5em;
+    font-weight: 300;
+    text-transform: uppercase;
+    text-align: center;
     margin-top: 20px;
     margin-bottom: 10px;
-    padding-bottom: 10px;
-    border-bottom: 1px solid;
     color: #fff;
 }
 
-#contacts .header-office {
-    border-color: #f33;
+#contacts h3::before {
+    content: ' ';
+    display: block;
+    clear: both;
 }
 
-#contacts .header-base {
-    border-color: #39f;
+#contacts address {
+    border-top: 1px solid;
+    margin: 1em 0; 
 }
 
-#contacts .contacts-phones,
-#contacts .contacts-address {
-    padding-bottom: 1em;
+#contacts address>div {
+    margin: 1em 0;
+    min-width: 160px;
+    float: left;
+}
+
+#contacts address>div.post {
+    min-width: 200px;
+    width: 60%;
+}
+
+#contacts address>div.phone-list {
+    min-width: 120px;
+    width: 40%;
+}
+
+#contacts address.office {
+    border-color: #c33;
+}
+
+#contacts address.production {
+    border-color: #33c;
 }
 
 #contacts a,
@@ -36,39 +60,50 @@
 #contacts a:focus,
 #contacts a:hover {
     color: #fff;
-    text-decoration: underline;
 }
 
 #contacts a:hover {
     color: #ccc;
+    text-decoration: none;
 }
 
 #contacts i {
-    text-decoration: none;
     margin-right: 0.5em;
 }
 
-#contacts .map>iframe {
-    display: block;
-    border: none;
-    width: 100%;
-    min-height: 196px;
-    margin: 0px;
-}
-
-#contacts .phone-text {
+#contacts .phone-list>span {
     color: #ccc;
     display: block;
 }
 
-#contacts .phone-text.primary {
-    color: #fff;
+#contacts .phone-list>span>a::after {
+    content: '\f0a5';
+    font-family: 'FontAwesome';
+    margin-left: 0.5em;
 }
 
 #contacts .map-office {
-    color: #f33
+    color: #c33
 }
 
-#contacts .map-base {
-    color: #39f
+#contacts .map-production {
+    color: #33c
+}
+
+#contacts .road-hint {
+    font-style: italic;
+    color: #ccc;
+    margin: 0;
+}
+
+@media screen and (max-width: 400px) {
+    #contacts h3 {
+        font-size: 1em;
+    }
+
+    #contacts address>div.post,
+    #contacts address>div.phone-list {
+        width: 100%;
+        float: none;
+    }
 }

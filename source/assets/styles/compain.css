@@ -1,0 +1,11 @@
+/**
+ * Copyright © 2017 Aleksey Grigoriev <aggpys@live.com>. All rights reserved.
+ * Licensed under the MIT License. See LICENSE file for full license information.
+ */
+
+#compain {
+    background: url('../images/section-tile.png') repeat-x;
+    border-bottom: 1px solid #ddd;
+    padding: 64px 0;
+    height: 100vh;
+}

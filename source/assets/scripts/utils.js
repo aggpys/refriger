@@ -31,9 +31,9 @@ $(document).on('click', 'a', function(event) {
  */
 $(document).on('scroll', function() {
 
-    var h = $('header').height() + $('header').offset().top;
+    var h = $('header').height() + $('header').offset().top/2;
 
-    $('#brand-logo').toggleClass('visible', document.body.scrollTop > h);
+    $('#brand-logo').toggleClass('visible', document.body.scrollTop >= h);
 
 });
 
@@ -66,10 +66,12 @@ $('.job-title').click(function() {
 $('button').click(function(){
 
     var id = $(this).data('href');
-
     if (id === undefined) return;
 
-    var scrollValue = $(id).offset().top;
+    var targetOffset = $(id).offset();
+    if (targetOffset === undefined) return;
+
+    var scrollValue = targetOffset.top;
     
     $('html, body').animate({
         scrollTop: scrollValue
