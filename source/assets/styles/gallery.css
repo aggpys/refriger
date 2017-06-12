@@ -1,11 +1,27 @@
+/**
+ * Copyright © 2017 Aleksey Grigoriev <aggpys@live.com>. All rights reserved.
+ * Licensed under the MIT License. See LICENSE file for full license information.
+ */
+
 #gallery {
     padding: 64px 0;
 }
 
 #gallery img {
+    opacity: .20;
     margin: 0 auto;
+    transition: all 1.5s;
 }
 
 #gallery div {
     outline: none;
+}
+
+#gallery .photo-preview img {outline: none;
+    background-color: #fff;
+    padding-left: 5px;
+}
+
+#gallery .slick-current img {
+    opacity: 1.0;
 }

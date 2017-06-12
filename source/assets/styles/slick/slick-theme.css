@@ -3,7 +3,7 @@
 /* Slider */
 .slick-loading .slick-list
 {
-    background: #fff url('./assets/images/ajax-loader.gif') center center no-repeat;
+    background: #fff url('../../assets/images/ajax-loader.gif') center center no-repeat;
 }
 
 /* Arrows */
@@ -179,7 +179,7 @@
     width: 20px;
     height: 20px;
 
-    content: '\f10c';
+    content: '\f096';
     text-align: center;
 
     opacity: .25;
@@ -191,6 +191,6 @@
 .slick-dots li.slick-active button:before
 {
     opacity: .75;
-    content: '\f192';
-    color: black;
+    content: '\f0c8';
+    color: #333;
 }

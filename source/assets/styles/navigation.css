@@ -37,14 +37,6 @@ nav .navbar-nav>li>a {
     transition: all 0.5s ease;
 }
 
-nav .accent-warm {
-    color: #f33;
-}
-
-nav .accent-cold {
-    color: #33f;
-}
-
 nav .visible {
     visibility: visible;
     opacity: 1;

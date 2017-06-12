@@ -40,12 +40,24 @@ $(document).on('scroll', function() {
 $(document).ready(function() {
 
     $('.photo-preview').slick({
-        slidesToShow: 1,
+        infinite: false,
+        slidesToShow: 3,
         slidesToScroll: 1,
+        variableWidth: true,
         adaptiveHeight: true,
-        arrows: false,
+        centerMode: true,
         dots: true,
-        fade: true
+        responsive: [
+            {
+                breakpoint: 768,
+                settings: {
+                    variableWidth: false,
+                    adaptiveHeight: false,
+                    slidesToShow: 1,
+                    arrows: false
+                }
+            }
+        ]
     });
 
     var yearSpan = $('#year');

@@ -86,6 +86,7 @@
 
 #contacts .work>span {
     padding: 0.5em;
+    font-size: 0.9em;
     white-space: nowrap;
     background-color: #33c;
     border-radius: 5px;

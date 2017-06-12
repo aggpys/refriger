@@ -44,3 +44,12 @@ a:visited {
 a:hover {
     color: #33f;
 }
+
+.accent-warm {
+    color: #f33;
+}
+
+.accent-cold {
+    color: #33f;
+}
+

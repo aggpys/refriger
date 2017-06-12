@@ -4,8 +4,6 @@
  */
 
 #compain {
-    background: url('../images/section-tile.png') repeat-x;
-    border-bottom: 1px solid #ddd;
     padding: 64px 0;
     height: 100vh;
 }

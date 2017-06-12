@@ -69,7 +69,7 @@ gulp.task('copy:favicons', function() {
  */
 gulp.task('copy:images', function() {
 
-    return gulp.src(refriger.path.source.images + '/**/*.{png,jpg,svg}', { base : refriger.path.source.root })
+    return gulp.src(refriger.path.source.images + '/**/*.{png,gif,jpg,svg}', { base : refriger.path.source.root })
         .pipe(plugins.newer(gulp.outdir))
         .pipe(plugins.imagemin([
             plugins.imagemin.jpegtran(), 
@@ -138,11 +138,11 @@ gulp.task('build:serve', ['copy:misc', 'copy:images', 'copy:favicons', 'bundle:c
     });
 
     gulp.watch(refriger.path.source.styles + '/**/*.css', ['bundle:css']);
-    gulp.watch(refriger.path.source.scripts + '/*.js', ['bundle:js']);
+    gulp.watch(refriger.path.source.scripts + '/**/*.js', ['bundle:js']);
     gulp.watch(refriger.path.source.root + '/*.html', ['copy:misc']);
-    gulp.watch(refriger.path.source.images + '/**/*.{png,jpg,svg}', ['copy:images']);
+    gulp.watch(refriger.path.source.images + '/**/*.{png,gif,jpg,svg}', ['copy:images']);
     
-    gulp.watch(gulp.outdir + '/**/*.{html,css,js,png,jpg,svg}').on('change', sync.reload);
+    gulp.watch(gulp.outdir + '/**/*.{html,css,js,png,gif,jpg,svg}').on('change', sync.reload);
 
 });
 
