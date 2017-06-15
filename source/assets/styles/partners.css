@@ -1,0 +1,34 @@
+/**
+ * Copyright © 2017 Aleksey Grigoriev <aggpys@live.com>. All rights reserved.
+ * Licensed under the MIT License. See LICENSE file for full license information.
+ */
+
+#partners {
+    padding: 64px 0;
+}
+
+#partners h1 {
+    text-align: center;
+    text-transform: uppercase;
+    color: #aaa;
+}
+
+#partners .row {
+    margin-bottom: 2em;
+}
+
+#partners .partner-container img {
+    margin: 0 auto;
+}
+
+#partners .partner-container {
+    padding: 1em;
+    opacity: .50;
+    transition: all 0.5s ease;
+    border: 1px solid transparent;
+}
+
+#partners .partner-container:hover {
+    opacity: 1.0;
+    border-color: #ddd;
+}

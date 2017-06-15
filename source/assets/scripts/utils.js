@@ -37,28 +37,10 @@ $(document).on('scroll', function() {
 
 });
 
+/**
+ * Document ready event handler: inserts the e-mail, rewrites the copyright string.
+ */
 $(document).ready(function() {
-
-    $('.photo-preview').slick({
-        infinite: false,
-        slidesToShow: 3,
-        slidesToScroll: 1,
-        variableWidth: true,
-        adaptiveHeight: true,
-        centerMode: true,
-        dots: true,
-        responsive: [
-            {
-                breakpoint: 768,
-                settings: {
-                    variableWidth: false,
-                    adaptiveHeight: false,
-                    slidesToShow: 1,
-                    arrows: false
-                }
-            }
-        ]
-    });
 
     var yearSpan = $('#year');
     var currentYear = new Date().getFullYear();
@@ -78,12 +60,9 @@ $(document).ready(function() {
 
 });
 
-$('.job-title').click(function() {
-
-    $(this).parent().children('.job-details').toggleClass('collapsed');
-
-});
-
+/**
+ * Button click common event handler: scrolls to the target.
+ */
 $('button').click(function(){
 
     var id = $(this).data('href');
@@ -99,4 +78,22 @@ $('button').click(function(){
     }, 400, function() {
         window.location.hash = id;
     });
+});
+
+$('.carousel-control.left').click(function(e) {
+
+    e.stopPropagation();
+    $('#gallery-carousel').carousel('prev');
+
+    return false;
+
+});
+
+$('.carousel-control.right').click(function(e) {
+
+    e.stopPropagation();
+    $('#gallery-carousel').carousel('next');
+
+    return false;
+
 });

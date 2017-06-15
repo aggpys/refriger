@@ -5,23 +5,19 @@
 
 #gallery {
     padding: 64px 0;
+    background-color: #111;
 }
 
-#gallery img {
-    opacity: .20;
-    margin: 0 auto;
-    transition: all 1.5s;
+#gallery-carousel {
+    border: 1px solid #222;
 }
 
-#gallery div {
-    outline: none;
+#gallery .carousel-inner img {
+    width: 100%;
+    opacity: .50;
+    transition: all 0.5s;
 }
 
-#gallery .photo-preview img {outline: none;
-    background-color: #fff;
-    padding-left: 5px;
-}
-
-#gallery .slick-current img {
+#gallery .carousel-inner .active img {
     opacity: 1.0;
 }
