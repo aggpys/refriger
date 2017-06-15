@@ -27,11 +27,27 @@ $(document).on('click', 'a', function(event) {
 });
 
 /**
- * Scrolling event handler: toggles the menu logotype visibility. 
+ * Scrolling event handler: toggles the menu logotype visibility,
+ * rewrites the mobile top title while scrolling.
  */
 $(document).on('scroll', function() {
 
     var h = $('header').height() + $('header').offset().top/2;
+    
+    // This code is actual for the mobile view only (top title rewriting).
+    if ($(window).width() < 768) {
+        var screenTop = $(window).scrollTop();
+        var screenHeight = $(window).height();
+
+        $('header,section').each(function(i, e) {
+            
+            var delta = $(e).offset().top - screenTop;
+            if (delta < screenHeight / 2) {
+                $('#section-title').html($(e).data('title'));
+                return;
+            }
+        });
+    }
 
     $('#brand-logo').toggleClass('visible', document.body.scrollTop >= h);
 
