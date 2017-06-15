@@ -51,7 +51,13 @@
 }
 
 #contacts i {
+    padding: 0.2em;
     margin-right: 0.5em;
+}
+
+#contacts h3>i {
+    background-color: #eee;
+    border-radius: 5px;
 }
 
 #contacts .phone-list>span {
@@ -66,11 +72,13 @@
 }
 
 #contacts .map-office {
-    color: #c33
+    color: #c33;
+    border-color: #c33;
 }
 
 #contacts .map-production {
-    color: #33c
+    color: #33c;
+    border-color: #33c;
 }
 
 #contacts .road-hint {
