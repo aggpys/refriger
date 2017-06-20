@@ -5,6 +5,7 @@
 
 #partners {
     padding: 64px 0;
+    background-color: #eee;
 }
 
 #partners h1 {
@@ -26,9 +27,11 @@
     opacity: .50;
     transition: all 0.5s ease;
     border: 1px solid transparent;
+    border-radius: 1em;
 }
 
 #partners .partner-container:hover {
     opacity: 1.0;
     border-color: #ddd;
+    background-color: #fff;
 }
