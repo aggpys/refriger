@@ -53,3 +53,7 @@ a:hover {
     color: #33f;
 }
 
+.tooltip-word {
+    font-weight: 700;
+    text-decoration: underline;
+}

@@ -73,6 +73,7 @@ $(document).ready(function() {
     mailAnchor.innerHTML = "info@refriger.ru";
 
     mailSpan.html(mailAnchor);
+    $('.tooltip-word').tooltip();
 
 });
 
@@ -111,5 +112,14 @@ $('.carousel-control.right').click(function(e) {
     $('#gallery-carousel').carousel('next');
 
     return false;
+
+});
+
+$('.object-details').click(function(e) {
+
+    if (!$(this).hasClass('expanded'))
+        $('.object-details').removeClass('expanded');
+
+    $(this).toggleClass('expanded');
 
 });

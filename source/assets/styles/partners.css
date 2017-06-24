@@ -26,12 +26,12 @@
     padding: 1em;
     opacity: .50;
     transition: all 0.5s ease;
-    border: 1px solid transparent;
     border-radius: 1em;
+    border: 1px solid transparent;
 }
 
 #partners .partner-container:hover {
     opacity: 1.0;
-    border-color: #ddd;
     background-color: #fff;
+    border-color: #ddd;
 }
