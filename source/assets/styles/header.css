@@ -39,16 +39,16 @@ header hgroup {
 
 header>canvas {
     position: absolute;
-    top: 0px;
-    left: 0px;
+    top: 0;
+    left: 0;
     z-index: -1;
 }
 
 header>.header-content {
     background-color: rgba(255, 255, 255, 0.3);
-    position: relative;
     padding: 64px 0;
     z-index: 0;
+    height: 512px;
 }
 
 header button {

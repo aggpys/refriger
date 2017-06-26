@@ -29,6 +29,7 @@ nav .brand-text {
     font-size: 0.8em;
     font-weight: 300;
     color: #aaa;
+    z-index: -1;
 }
 
 nav .navbar-nav>li,

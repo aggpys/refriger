@@ -10,19 +10,21 @@
 //= background.js
 //= utils.js
 
+var gc;
+
 /**
  * This function starts the WebGL rendering process:
  *  - initializes graphics context;
  *  - downloads the scene resources;
  *  - starts the animation cycle.
  */
-(function () {
+function gl_start() {
 
     if (!Modernizr.webgl) return; // Do nothing, if the WebGL is not supported by the current browser.
 
     var tm = new TextureManager('./assets/images/scenes/default');
 
-    var gc = new GraphicsContext('header', {
+    gc = new GraphicsContext('header', {
 
         colors: { clear: 0xffffff },
 
@@ -82,6 +84,7 @@
 
     });
 
+    gc.reset();
     gc.animate();
 
-})();
+}

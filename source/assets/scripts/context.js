@@ -57,19 +57,19 @@ var GraphicsContext = function(container, params) {
     this.domParent.append(this.renderer.domElement);
     this.objects = [];
 
-    $(window).resize(function() {
+    $(window).resize(this.reset.bind(this));
 
+};
+
+Object.assign(GraphicsContext.prototype, {
+
+    reset: function() {
         var width = this.domParent.innerWidth();
         var height = this.domParent.innerHeight();
         this.renderer.setSize(width, height);
         this.camera.aspect = width/height;
         this.camera.updateProjectionMatrix();
-
-    }.bind(this));
-
-};
-
-Object.assign(GraphicsContext.prototype, {
+    },
 
     add: function(renderable) {
 
