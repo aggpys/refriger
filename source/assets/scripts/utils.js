@@ -138,12 +138,14 @@ $('.object-details').click(function(e) {
 $('.more-button').click(function(e) {
 
     var collection = $('.more-hidden');
+    var rowHeight = collection.first().outerHeight();
 
     collection.first().removeClass('more-hidden');
     
-    $('html, body').animate({
-        scrollTop: $(this).offset().top - window.innerHeight + 2*$(this).outerHeight()
-    }, 400);
+    if (window.scrollY + window.innerHeight - rowHeight < $(this).offset().top) 
+        $('html, body').animate({
+            scrollTop: $(this).offset().top - window.innerHeight + 2*$(this).outerHeight()
+        }, 400);
 
     if (collection.length <= 1) {
         $(this).hide();

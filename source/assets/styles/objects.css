@@ -135,3 +135,13 @@
     background-color: #6184a9;
     color: #ccc;
 }
+
+@media (max-width: 767px) {
+    #objects .object-details.expanded .work-description {
+        display: block;
+        position: relative;
+        top: auto;
+        left: auto;
+        right: auto;
+    }
+}

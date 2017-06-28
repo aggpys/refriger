@@ -3,7 +3,9 @@
  * Licensed under the MIT License. See LICENSE file for full license information.
  */
 
-#compain {
+#about {
     padding: 64px 0;
     height: 100vh;
+
+    background: url('../images/about-tile.png') repeat-x;
 }
