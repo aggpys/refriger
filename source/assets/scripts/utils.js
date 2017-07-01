@@ -78,6 +78,8 @@ $(document).ready(function() {
     gl_start();
     gc.reset();
 
+    lightGallery(document.getElementById('photos'));
+
 });
 
 /**

@@ -8,6 +8,7 @@
 //= plane.js
 //= dynamic.js
 //= background.js
+//= gallery.js
 //= utils.js
 
 var gc;

@@ -14,24 +14,61 @@
     color: #aaa;
 }
 
-#partners .row {
-    margin-bottom: 2em;
-}
-
 #partners .partner-container img {
-    margin: 0 auto;
+    margin: 1em auto;
 }
 
 #partners .partner-container {
-    padding: 1em;
-    opacity: 0.5;
+    background-color: #fff;
+    margin: 15px auto;
     transition: all 0.5s ease;
-    border: 1px solid transparent;
+    border: 1px solid #ddd;
     border-radius: 1em;
 
-    opacity: 0.3;
+    cursor: default;
+}
 
+#partners .partner-title {
+    position: relative;
+    background-color: #fff;
+    border-bottom-left-radius: 1em;
+    border-bottom-right-radius: 1em;
+    border-top: 1px solid #ddd;
+    padding: 1em 0;
+    text-align: center;
+
+    transition: all 0.5s ease;
+}
+
+#partners .partner-title>a,
+#partners .partner-title>a:active,
+#partners .partner-title>a:hover,
+#partners .partner-title>a:visited {
+    color: #36c;
+    text-decoration: none;
+    transition: color 0.5s ease;
     cursor: pointer;
+}
+
+#partners .partner-title>a:hover {
+    color: #333;
+}
+
+#partners .partner-title>a::after {
+    content: '\f08e';
+    font-family: 'FontAwesome';
+    font-size: 0.8em;
+
+    color: #666;
+
+    margin-left: 0.5em;
+    margin-top: 0.2em;
+
+    transition: all 0.5s ease;
+}
+
+#partners .partner-title>a:hover::after {
+    color: #f33;
 }
 
 #partners .partner-container:hover {
@@ -39,4 +76,12 @@
 
     border-color: #ddd;
     background-color: #ededed;
+}
+
+@media screen and (max-width: 420px) {
+
+    #partners .partner-title {
+        display: none;
+    }
+
 }

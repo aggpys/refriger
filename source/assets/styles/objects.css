@@ -32,7 +32,7 @@
     border-bottom: 1px solid #eee;
     font-size: 16px;
     text-align: center;
-    color: #83a3c6;
+    color: #36c;
     transition: all 0.5s;
 }
 
@@ -47,20 +47,13 @@
 }
 
 #objects .work-description {
-
     position: absolute;
     top: 0;
     left: 15px;
     right: 15px;
-
     padding: 1em;
-    
-    height: 100%;
-
     background-color: #fff;
-
     border: 1px solid transparent;
-
     border-radius: 1em;
     transition: all 0.5s;
     visibility: hidden;
@@ -73,7 +66,7 @@
     border-top-left-radius: initial;
     border-top-right-radius: initial;
     border-color: #ddd;
-    background-color: #f6f6f6;
+    background-color: #eee;
     background-image: url('../images/work-description-tile.png');
     height: auto;
     visibility: visible;
@@ -99,7 +92,7 @@
     font-size: 0.8em;
     margin-left: -1.5em;
     float: left;
-    color: rgba(33, 220, 33, 0.3);
+    color: rgba(51, 102, 204, 0.5);
 }
 
 #objects .more-hidden {
@@ -114,26 +107,19 @@
     height: 64px;
     line-height: 62px;
 
-    border: 1px solid #83a3c6;
+    border: 1px solid #36c;
     border-radius: 50%;
     background-color: #fff;
-    color: #83a3c6;
+    color: #36f;
 
-    -webkit-transition: all 0.5s ease;
-    -moz-transition: all 0.5s ease;
     transition: all 0.5s ease;
 }
 
-#objects button:hover {
-    background-color: #a1bad4;
-    border-color: #879bb1;
-    color: #fff;
-}
-
+#objects button:hover,
 #objects button:active {
-    border-color: #677a8f;
-    background-color: #6184a9;
-    color: #ccc;
+    background-color: #36f;
+    border-color: #36c;
+    color: #fff;
 }
 
 @media (max-width: 767px) {
