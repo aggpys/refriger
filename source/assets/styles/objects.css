@@ -123,11 +123,22 @@
 }
 
 @media (max-width: 767px) {
+    #objects .object-details .work-description {
+        transition: none;
+    }
+
+
     #objects .object-details.expanded .work-description {
         display: block;
         position: relative;
         top: auto;
         left: auto;
         right: auto;
+
+        padding: 0;
+
+        background-image: none;
+        background-color: transparent;
+        border: none;
     }
 }
