@@ -11,7 +11,7 @@
     margin: 15px auto;
     padding: 5px;
     border: 1px solid transparent;
-    border-radius: 1em;
+    border-radius: 3px;
     user-select: none;
     cursor: pointer;
     transition: all 0.5s;
@@ -54,7 +54,7 @@
     padding: 1em;
     background-color: #fff;
     border: 1px solid transparent;
-    border-radius: 1em;
+    border-radius: 3px;
     transition: all 0.5s;
     visibility: hidden;
     opacity: 0;
@@ -103,16 +103,21 @@
     outline: none;
     display: block;
     margin: 0 auto;
-    width: 64px;
-    height: 64px;
-    line-height: 62px;
+    padding: 0.5em;
+    font-size: 1.2em;
 
     border: 1px solid #36c;
-    border-radius: 50%;
+    border-radius: 3px;
     background-color: #fff;
     color: #36f;
 
     transition: all 0.5s ease;
+}
+
+#objects button::after {
+    content: '\f107';
+    font-family: 'FontAwesome';
+    margin-left: 0.5em;
 }
 
 #objects button:hover,

@@ -63,8 +63,9 @@ header>.header-content:hover {
 header button {
     background-color: transparent;
     border: 1px solid #666;
+    border-radius: 3px;
     font-size: 1.2em;
-    padding: 0.6em 1.2em;
+    padding: 0.5em;
     text-transform: uppercase;
     transition: all 0.3s ease;
 }
