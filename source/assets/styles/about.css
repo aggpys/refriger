@@ -7,6 +7,5 @@
     padding: 64px 0;
     height: 100vh;
 
-    background: url('../images/about-tile.png') repeat-x;
-    background-color: #eee;
+    background: linear-gradient(rgba(255, 255, 255, 0.6), #eee 10%);
 }

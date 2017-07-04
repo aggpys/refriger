@@ -1,0 +1,63 @@
+/**
+ * Copyright © 2017 Aleksey Grigoriev <aggpys@live.com>. All rights reserved.
+ * Licensed under the MIT License. See LICENSE file for full license information.
+ */
+
+#callback {
+    padding: 32px 0;
+    background: linear-gradient(#eee 5%, #eee 95%, rgba(0, 0, 0, 0.1));
+    border-top: 1px solid #fff;
+}
+
+#callback input,
+#callback textarea {
+    outline: none;
+    border: 1px solid #ddd;
+    border-radius: 3px;
+
+    display: block;
+    margin: 1em auto;
+    padding: 0.5em;
+    width: 100%;
+
+    font-size: 1.2em;
+    transition: all 0.5s ease;
+}
+
+#callback input[type="submit"] {
+    background-color: transparent;
+    width: auto;
+    margin: 1em 0;
+    border-color: #c33;
+    color: #c33;
+}
+
+#callback textarea {
+    resize: vertical;
+    min-height: 6em;
+}
+
+#callback input:hover,
+#callback input:active,
+#callback input:focus {
+    border-color: #33c;
+}
+
+#callback textarea:hover,
+#callback textarea:active,
+#callback textarea:focus {
+    border-color: #c33;
+}
+
+#callback input[type="submit"]:hover,
+#callback input[type="submit"]:focus {
+    background-color: #c33;
+    border-color: #c33;
+    color: #fff;
+}
+
+#callback input[type="submit"]:active {
+    box-shadow: 2px 2px 2px rgba(0, 0, 0, 0.3) inset;
+    background-color: #c11;
+    color: #ccc;
+}

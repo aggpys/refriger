@@ -6,8 +6,7 @@
 footer {
     padding: 32px 0;
     border-top: 1px solid #eee;
-    background: url('../images/footer-tile.png') repeat-x;
-    background-color: #ddd;
+    background: linear-gradient(#ddd, rgba(255, 255, 255, 0.1));
 }
 
 footer #year {
@@ -15,12 +14,12 @@ footer #year {
 }
 
 footer h3 {
-    border-bottom: 1px solid #36c;
+    border-bottom: 1px solid #ccc;
     text-transform: uppercase;
     font-family: 'Open Sans', Helvetica, sans-serif;
     font-weight: 400;
     font-size: 1em;
-    color: #36c;
+    color: #aaa;
     padding-bottom: 0.5em;
 }
 
