@@ -572,15 +572,21 @@
         <div class="container">
             <div class="row">
                 <div class="col-md-7">
-                    <h2>Остались вопросы?</h2>
-                    <p>Оставьте Ваши данные, и мы свяжемся с Вами в ближайшее время</p>
+                    <img src="./assets/images/callback.svg" class="img-responsive">
+                    <hgroup>
+                        <h2>Есть вопросы?</h2>
+                        <h3>Оставьте Ваши данные, и мы свяжемся с Вами</h3>
+                    </hgroup>
                 </div>
                 <div class="col-md-5">
                     <form method="post" action="#">
-                        <input type="text" name="name" placeholder="Имя">
-                        <input type="email" name="email" placeholder="Адрес электронной почты">
-                        <textarea placeholder="Сообщение"></textarea>
-                        <input type="submit" value="Отправить">
+                        <fieldset>
+                            <input type="text" name="name" placeholder="Имя">
+                            <input type="email" name="email" placeholder="Адрес электронной почты">
+                            <textarea placeholder="Сообщение"></textarea>
+                            <p>Мы не собираем и не храним Ваши персональные данные, и не используем их для рассылки (<a href="/policy" target="_blank">подробнее</a>)</p>
+                            <input type="submit" value="Отправить">
+                        </fieldset>
                     </form>
                 </div>
             </div>
