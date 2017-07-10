@@ -5,8 +5,55 @@
 
 #about {
     padding: 64px 0;
-    height: 100vh;
 
     border-top: 1px solid #fff;
     background: linear-gradient(#eee, #fff);
+}
+
+#about p {
+    font-weight: 300;
+    font-size: 1.2em;
+    line-height: 1.6em;
+}
+
+.membership {
+    border-top: 1px solid;
+    border-bottom: 1px solid;
+    border-color: #33c;
+    background-color: #112;
+    text-align: center;
+    padding: 2.5em 0;
+    transition: all 1.0s ease;
+}
+
+.membership h2 {
+    display: inline;
+    margin: 0.5em auto;
+    font-weight: 300;
+    font-size: 1.2em;
+    color: #ccc;
+    transition: color 1.0s;
+}
+
+.membership img {
+    max-width: 90%;
+}
+
+.membership a {
+    margin-right: 0.5em;
+    opacity: 0.7;
+
+    transition: all 0.5s;
+}
+
+.membership a:hover,
+.membership a:active,
+.membership a:focus {
+    opacity: 1;
+}
+
+@media only screen and (max-width: 768px) {
+    .membership h2 {
+        display: block;
+    }
 }

@@ -5,19 +5,16 @@
 
 #gallery {
     padding: 64px 0;
-    background-color: #222;
+    background-color: #112;
 }
 
 #gallery a {
     position: relative;
-    width: 19%;
-    margin-right: 1%;
-    margin-bottom: 1%;
+    width: 25%;
     display: block;
     float: left;
     overflow: hidden;
-    border: 1px solid #444;
-    border-radius: 3px;
+    border: 6px solid transparent;
     transition: all 0.5s;
 }
 
@@ -27,21 +24,15 @@
     border-color: #39f;
 }
 
-@media only screen and (max-width: 1023px) {
-    #gallery a {
-        width: 24%; 
-    }
-}
-
 @media only screen and (max-width: 767px) {
     #gallery a {
-        width: 32.33332%; 
+        width: 33.33332%; 
     }
 }
 
 @media only screen and (max-width: 419px) {
     #gallery a {
-        width: 49%;
+        width: 50%;
     }
 }
 
