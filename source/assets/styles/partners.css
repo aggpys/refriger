@@ -28,6 +28,11 @@
     cursor: default;
 }
 
+#partners .partner-container:hover {
+    border-color: #aaa;
+    background-color: #ededed;
+}
+
 #partners .partner-title {
     position: relative;
     background-color: #fff;
@@ -71,16 +76,24 @@
     color: #f33;
 }
 
-#partners .partner-container:hover {
-    opacity: 1;
-    border-color: #ddd;
-    background-color: #ededed;
-}
-
 @media screen and (max-width: 420px) {
 
     #partners .partner-title {
         display: none;
+    }
+
+}
+
+@media (hover: none) {
+
+    #partners .partner-container {
+        border-color: transparent;
+        background-color: #fff;
+    }
+
+    #partners .partner-container:hover {
+        border-color: transparent;
+        background-color: #fff;
     }
 
 }

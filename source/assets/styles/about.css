@@ -5,9 +5,8 @@
 
 #about {
     padding: 64px 0;
-
+    background-color: #eee;
     border-top: 1px solid #fff;
-    background: linear-gradient(#eee, #fff);
 }
 
 #about p {
@@ -35,6 +34,16 @@
     transition: color 1.0s;
 }
 
+.membership:hover {
+    background-color: #fff;
+}
+
+
+.membership:hover h2 {
+    color: #112;
+}
+
+
 .membership img {
     max-width: 90%;
 }
@@ -55,5 +64,23 @@
 @media only screen and (max-width: 768px) {
     .membership h2 {
         display: block;
+    }
+}
+
+@media (hover: none) {
+    .membership {
+        transition: none;
+    }
+
+    .membership:hover {
+        background-color: #112;
+    }
+
+    .membership h2 {
+        transition: none;
+    }
+
+    .membership:hover h2 {
+        color: #ccc;
     }
 }
