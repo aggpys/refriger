@@ -15,7 +15,8 @@
 }
 
 #partners .partner-container img {
-    margin: 1em auto;
+    margin: 0 auto;
+    padding: 2em;
 }
 
 #partners .partner-container {

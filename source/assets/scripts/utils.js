@@ -109,6 +109,8 @@ $('.object-details').click(function(e) {
 
     $(this).toggleClass('expanded');
 
+    if (window.innerWidth < 768) return;
+
     var eh = $(this).outerHeight();
     var et = $(this).offset().top;
 

@@ -132,7 +132,7 @@
     background-color: #36c;
 }
 
-@media (max-width: 767px) {
+@media (max-width: 768px) {
     #objects .object-details .work-description {
         transition: none;
     }
@@ -150,5 +150,9 @@
         background-image: none;
         background-color: transparent;
         border: none;
+    }
+
+    #objects .work-description>ul>li::before {
+        content: none;
     }
 }

@@ -15,14 +15,23 @@
     line-height: 1.6em;
 }
 
+#about img.img-idea {
+    opacity: 0.7;
+    max-height: 128px;
+    transition: opacity 0.5s ease;
+}
+
+#about:hover img.img-idea {
+    opacity: 1.0;
+}
+
 .membership {
     border-top: 1px solid;
     border-bottom: 1px solid;
-    border-color: #33c;
-    background-color: #112;
+    border-color: #ccc;
+    background-color: #fff;
     text-align: center;
     padding: 2.5em 0;
-    transition: all 1.0s ease;
 }
 
 .membership h2 {
@@ -30,19 +39,9 @@
     margin: 0.5em auto;
     font-weight: 300;
     font-size: 1.2em;
-    color: #ccc;
+    color: #112;
     transition: color 1.0s;
 }
-
-.membership:hover {
-    background-color: #fff;
-}
-
-
-.membership:hover h2 {
-    color: #112;
-}
-
 
 .membership img {
     max-width: 90%;
@@ -62,25 +61,23 @@
 }
 
 @media only screen and (max-width: 768px) {
+    #about img.img-idea {
+        margin: 1em 0;
+    }
+
     .membership h2 {
         display: block;
     }
 }
 
 @media (hover: none) {
-    .membership {
+    #about img.img-idea {
+        opacity: 1.0;
+        max-height: 128px;
         transition: none;
     }
 
-    .membership:hover {
-        background-color: #112;
-    }
-
-    .membership h2 {
-        transition: none;
-    }
-
-    .membership:hover h2 {
-        color: #ccc;
+    #about:hover img.img-idea {
+        opacity: 1.0;
     }
 }
